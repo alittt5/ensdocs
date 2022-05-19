@@ -1,0 +1,897 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>.eth Permanent Registrar · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="registrar.html" />
+    
+    
+    <link rel="prev" href="../publicresolver.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../../terminology.html">
+            
+                <a href="../../terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../frequently-asked-questions.html">
+            
+                <a href="../../frequently-asked-questions.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../../ens-deployments.html">
+            
+                <a href="../../ens-deployments.html">
+            
+                    
+                    ENS Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../../permanent-registrar-faq.html">
+            
+                <a href="../../permanent-registrar-faq.html">
+            
+                    
+                    Registrar Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../../deploying-ens-on-a-private-chain.html">
+            
+                <a href="../../deploying-ens-on-a-private-chain.html">
+            
+                    
+                    Deploying ENS on a Private Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../../dns-registrar-guide.html">
+            
+                <a href="../../dns-registrar-guide.html">
+            
+                    
+                    DNS Registrar guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../../bug-bounty-program.html">
+            
+                <a href="../../bug-bounty-program.html">
+            
+                    
+                    Bug Bounty Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../../ens-improvement-proposals/">
+            
+                <a href="../../ens-improvement-proposals/">
+            
+                    
+                    ENS Improvement Proposals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../../ens-improvement-proposals/ensip-1-ens.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-1-ens.html">
+            
+                    
+                    ENSIP-1: ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                    
+                    ENSIP-2: Initial Hash Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                    
+                    ENSIP-3: Reverse Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                    
+                    ENSIP-4: Support for contract ABIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                    
+                    ENSIP-5: Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                    
+                    ENSIP-6: DNS-in-ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                    
+                    ENSIP-7: Contenthash field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                    
+                    ENSIP-8: Interface Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                    
+                    ENSIP-9: Multichain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                    
+                    ENSIP-10: Wildcard Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                    
+                    ENSIP-11: EVM compatible Chain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                <a href="../../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                    
+                    ENSIP-12: Avatar Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../../dapp-developer-guide/ens-enabling-your-dapp.html">
+            
+                <a href="../../dapp-developer-guide/ens-enabling-your-dapp.html">
+            
+                    
+                    ENS Enabling your DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../../dapp-developer-guide/ens-libraries.html">
+            
+                <a href="../../dapp-developer-guide/ens-libraries.html">
+            
+                    
+                    ENS Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../../dapp-developer-guide/working-with-ens.html">
+            
+                <a href="../../dapp-developer-guide/working-with-ens.html">
+            
+                    
+                    Working with ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../../dapp-developer-guide/resolving-names.html">
+            
+                <a href="../../dapp-developer-guide/resolving-names.html">
+            
+                    
+                    Resolving Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../../dapp-developer-guide/managing-names.html">
+            
+                <a href="../../dapp-developer-guide/managing-names.html">
+            
+                    
+                    Managing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../../dapp-developer-guide/registering-and-renewing-names.html">
+            
+                <a href="../../dapp-developer-guide/registering-and-renewing-names.html">
+            
+                    
+                    Registering & Renewing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../../dapp-developer-guide/front-end-design-guidelines.html">
+            
+                <a href="../../dapp-developer-guide/front-end-design-guidelines.html">
+            
+                    
+                    ENS Front-End Design Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../../dapp-developer-guide/ens-as-nft.html">
+            
+                <a href="../../dapp-developer-guide/ens-as-nft.html">
+            
+                    
+                    ENS as NFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../../dapp-developer-guide/ens-l2-offchain.html">
+            
+                <a href="../../dapp-developer-guide/ens-l2-offchain.html">
+            
+                    
+                    ENS Layer2 and offchain data support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../name-processing.html">
+            
+                <a href="../name-processing.html">
+            
+                    
+                    Name Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../ens.html">
+            
+                <a href="../ens.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../reverseregistrar.html">
+            
+                <a href="../reverseregistrar.html">
+            
+                    
+                    ReverseRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../testregistrar.html">
+            
+                <a href="../testregistrar.html">
+            
+                    
+                    TestRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../publicresolver.html">
+            
+                <a href="../publicresolver.html">
+            
+                    
+                    PublicResolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="3.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    .eth Permanent Registrar
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="registrar.html">
+            
+                <a href="registrar.html">
+            
+                    
+                    Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="controller.html">
+            
+                <a href="controller.html">
+            
+                    
+                    Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../dns-registrar.html">
+            
+                <a href="../dns-registrar.html">
+            
+                    
+                    DNS Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../../contract-developer-guide/resolving-names-on-chain.html">
+            
+                <a href="../../contract-developer-guide/resolving-names-on-chain.html">
+            
+                    
+                    Resolving Names On-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../../contract-developer-guide/writing-a-resolver.html">
+            
+                <a href="../../contract-developer-guide/writing-a-resolver.html">
+            
+                    
+                    Writing a Resolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../../contract-developer-guide/writing-a-registrar.html">
+            
+                <a href="../../contract-developer-guide/writing-a-registrar.html">
+            
+                    
+                    Writing a Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://discuss.ens.domains">
+            
+                    
+                    ENS Discussion Forum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://discord.gg/AskZbFx">
+            
+                    
+                    ENS Support Chat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ENS Migration (February 2020)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                <a href="../../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                    
+                    Guide for DApp Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../../ens-migration-february-2020/technical-description.html">
+            
+                <a href="../../ens-migration-february-2020/technical-description.html">
+            
+                    
+                    Technical Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >.eth Permanent Registrar</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="eth-permanent-registrar">.eth Permanent Registrar</h1>
+<p>The Permanent Registrar is the code that will govern allocation and renewal of names in the .eth TLD.</p>
+<h2 id="system-architecture">System architecture</h2>
+<p>Code for the permanent registrar can be found in the <a href="https://github.com/ensdomains/ethregistrar" target="_blank">ethregistrar</a> repository.</p>
+<p>The registrar itself is called <a href="registrar.html">BaseRegistrar</a>. This contract implements several key functions:</p>
+<ul>
+<li>The owner of the registrar may add and remove &apos;controllers&apos;.</li>
+<li>Controllers may register new domains and extend the expiry of (renew) existing domains. They can not change the ownership or reduce the expiration time of existing domains.</li>
+<li>Name owners may transfer ownership to another address.</li>
+<li>Name owners may reclaim ownership in the ENS registry if they have lost it.</li>
+<li>Owners of names in the legacy registrar may transfer them to the new registrar, during the 1 year transition period. When they do so, their deposit is returned to them in its entirety.</li>
+</ul>
+<p>In addition, the registrar is an <a href="https://github.com/ensdomains/ens/blob/master/docs/ethregistrar.rst#id3" target="_blank">ERC721</a> compliant nonfungable token contract, meaning that .eth registrations can be transferred in the same fashion as other NFTs.</p>
+<p>Users will interact directly with this contract when transferring ownership of names, or recovering ownership in the ENS registry of a name (for example, one whose ownership was previously transferred to a contract). Users can also query names to see their registration status and expiry date. For initial registration and for renewals, users will need to interact with a controller contract.</p>
+<p>This separation of concerns reduces the attack surface for the registrar, and provides users with guarantees of continued ownership of a name so long as the registrar is in place. Simultaneously, it provides for improvement and innovation over registration and renewal mechanisms. A future update may transfer ownership of the root and the .eth TLD to a contract with restricted permissions, thus preventing even the root keyholders from modifying a .eth registraion, while still providing for future updates to the set of controllers.</p>
+<p>Initially, one controller is implemented, the <a href="controller.html">ETHRegistrarController</a>. This controller provides a straightforward registration and renewal mechanism for domains that are 7 or more characters long, implementing the following functionality:</p>
+<ul>
+<li>The owner of the controller may set a price oracle contract, which determines the cost of registrations and renewals based on the name and the desired registration or renewal duration.</li>
+<li>The owner of the controller may withdraw any collected funds to their account.</li>
+<li>Users can register new names using a commit/reveal process and by paying the appropriate registration fee.</li>
+<li>Users can renew a name by paying the appropriate fee. Any user may renew a domain, not just the name&apos;s owner. There is no limit on renewal duration.</li>
+</ul>
+<p>By allowing anyone to renew a domain, users concerned with the longevity of a name they interact with can ensure it remains registered by paying for the registration themselves, if necessary.</p>
+<p>By allowing renewal for arbitrarily long periods of time, users can &apos;lock in&apos; a desirable registration fee. Names can be made effectively &apos;immortal&apos; by renewing for a long period, ensuring that stability of the name can be guaranteed by smart contract.</p>
+<p>Initially, a single pricing oracle was deployed, the <a href="https://github.com/ensdomains/ethregistrar/blob/master/contracts/StablePriceOracle.sol" target="_blank">StablePriceOracle</a>. This contract permits its owner to set prices in USD for each permitted name length, and uses a USD:ETH price oracle to convert those prices into Ether at the current rate. Users will not have to interact with this oracle directly, as the controller provides functionality to determine pricing for a candidate name registration or renewal.</p>
+<h2 id="discovery">Discovery</h2>
+<p>Finding the address of the new registrar is straightforward: look up the owner of the domain &apos;eth&apos; in ENS, by calling <code>owner(namehash(&apos;eth&apos;))</code> on the ENS registry.</p>
+<p>In order to support discovering the address of the controller, ENS supports interface discovery via <a href="https://eips.ethereum.org/EIPS/eip-1844" target="_blank">EIP 1844</a>. This mechanism permits looking up the address of the contract that implements a required interface via the following process:</p>
+<ol>
+<li>Set <code>node = namehash(&apos;eth&apos;)</code>.</li>
+<li>Look up the ENS resolver by calling <code>resolver(node)</code> on the ENS registry.</li>
+<li>Call the <code>interfaceImplementer(node, interfaceId)</code> method on that resolver, where <code>interfaceId</code> is the <a href="https://eips.ethereum.org/EIPS/eip-165" target="_blank">EIP 165</a> interface ID of the interface you need.</li>
+</ol>
+<p>The following interface IDs are presently defined for the .eth permanent registrar:</p>
+<ul>
+<li><code>0x6ccb2df4</code>, the interface ID for <a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank">ERC721</a> (NFTs). This returns the address of the registrar itself (which can also be fetched by doing an address lookup, or by looking up the owner of &apos;.eth&apos;.</li>
+<li><code>0x018fac06</code>, the interface ID for the controller. Returns the controller&apos;s address.</li>
+<li><code>0x7ba18ba1</code>, the interface ID for the legacy registrar&apos;s migration function. Returns the legacy registrar&apos;s address.</li>
+</ul>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../publicresolver.html" class="navigation navigation-prev " aria-label="Previous page: PublicResolver">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="registrar.html" class="navigation navigation-next " aria-label="Next page: Registrar">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":".eth Permanent Registrar","level":"3.6","depth":1,"next":{"title":"Registrar","level":"3.6.1","depth":2,"path":"contract-api-reference/.eth-permanent-registrar/registrar.md","ref":"contract-api-reference/.eth-permanent-registrar/registrar.md","articles":[]},"previous":{"title":"PublicResolver","level":"3.5","depth":1,"path":"contract-api-reference/publicresolver.md","ref":"contract-api-reference/publicresolver.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"contract-api-reference/.eth-permanent-registrar/README.md","mtime":"2022-05-06T01:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T01:02:36.125Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

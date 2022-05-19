@@ -1,0 +1,1202 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ENSIP-1: ENS · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="Documentation of the basic ENS protocol (formerly EIP-137).">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ensip-2-initial-hash-registrar.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../terminology.html">
+            
+                <a href="../terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../frequently-asked-questions.html">
+            
+                <a href="../frequently-asked-questions.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ens-deployments.html">
+            
+                <a href="../ens-deployments.html">
+            
+                    
+                    ENS Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../permanent-registrar-faq.html">
+            
+                <a href="../permanent-registrar-faq.html">
+            
+                    
+                    Registrar Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../deploying-ens-on-a-private-chain.html">
+            
+                <a href="../deploying-ens-on-a-private-chain.html">
+            
+                    
+                    Deploying ENS on a Private Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dns-registrar-guide.html">
+            
+                <a href="../dns-registrar-guide.html">
+            
+                    
+                    DNS Registrar guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../bug-bounty-program.html">
+            
+                <a href="../bug-bounty-program.html">
+            
+                    
+                    Bug Bounty Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    ENS Improvement Proposals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.9.1" data-path="ensip-1-ens.html">
+            
+                <a href="ensip-1-ens.html">
+            
+                    
+                    ENSIP-1: ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ensip-2-initial-hash-registrar.html">
+            
+                <a href="ensip-2-initial-hash-registrar.html">
+            
+                    
+                    ENSIP-2: Initial Hash Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ensip-3-reverse-resolution.html">
+            
+                <a href="ensip-3-reverse-resolution.html">
+            
+                    
+                    ENSIP-3: Reverse Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ensip-4-support-for-contract-abis.html">
+            
+                <a href="ensip-4-support-for-contract-abis.html">
+            
+                    
+                    ENSIP-4: Support for contract ABIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ensip-5-text-records.html">
+            
+                <a href="ensip-5-text-records.html">
+            
+                    
+                    ENSIP-5: Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ensip-6-dns-in-ens.html">
+            
+                <a href="ensip-6-dns-in-ens.html">
+            
+                    
+                    ENSIP-6: DNS-in-ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ensip-7-contenthash-field.html">
+            
+                <a href="ensip-7-contenthash-field.html">
+            
+                    
+                    ENSIP-7: Contenthash field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ensip-8-interface-discovery.html">
+            
+                <a href="ensip-8-interface-discovery.html">
+            
+                    
+                    ENSIP-8: Interface Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ensip-9-multichain-address-resolution.html">
+            
+                <a href="ensip-9-multichain-address-resolution.html">
+            
+                    
+                    ENSIP-9: Multichain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ensip-10-wildcard-resolution.html">
+            
+                <a href="ensip-10-wildcard-resolution.html">
+            
+                    
+                    ENSIP-10: Wildcard Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ensip-11-evmchain-address-resolution.html">
+            
+                <a href="ensip-11-evmchain-address-resolution.html">
+            
+                    
+                    ENSIP-11: EVM compatible Chain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="ensip-12-avatar-text-records.html">
+            
+                <a href="ensip-12-avatar-text-records.html">
+            
+                    
+                    ENSIP-12: Avatar Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="../dapp-developer-guide/ens-enabling-your-dapp.html">
+            
+                <a href="../dapp-developer-guide/ens-enabling-your-dapp.html">
+            
+                    
+                    ENS Enabling your DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="../dapp-developer-guide/ens-libraries.html">
+            
+                <a href="../dapp-developer-guide/ens-libraries.html">
+            
+                    
+                    ENS Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="../dapp-developer-guide/working-with-ens.html">
+            
+                <a href="../dapp-developer-guide/working-with-ens.html">
+            
+                    
+                    Working with ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="../dapp-developer-guide/resolving-names.html">
+            
+                <a href="../dapp-developer-guide/resolving-names.html">
+            
+                    
+                    Resolving Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="../dapp-developer-guide/managing-names.html">
+            
+                <a href="../dapp-developer-guide/managing-names.html">
+            
+                    
+                    Managing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="../dapp-developer-guide/registering-and-renewing-names.html">
+            
+                <a href="../dapp-developer-guide/registering-and-renewing-names.html">
+            
+                    
+                    Registering & Renewing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="../dapp-developer-guide/front-end-design-guidelines.html">
+            
+                <a href="../dapp-developer-guide/front-end-design-guidelines.html">
+            
+                    
+                    ENS Front-End Design Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="../dapp-developer-guide/ens-as-nft.html">
+            
+                <a href="../dapp-developer-guide/ens-as-nft.html">
+            
+                    
+                    ENS as NFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="../dapp-developer-guide/ens-l2-offchain.html">
+            
+                <a href="../dapp-developer-guide/ens-l2-offchain.html">
+            
+                    
+                    ENS Layer2 and offchain data support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../contract-api-reference/name-processing.html">
+            
+                <a href="../contract-api-reference/name-processing.html">
+            
+                    
+                    Name Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../contract-api-reference/ens.html">
+            
+                <a href="../contract-api-reference/ens.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../contract-api-reference/reverseregistrar.html">
+            
+                <a href="../contract-api-reference/reverseregistrar.html">
+            
+                    
+                    ReverseRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../contract-api-reference/testregistrar.html">
+            
+                <a href="../contract-api-reference/testregistrar.html">
+            
+                    
+                    TestRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../contract-api-reference/publicresolver.html">
+            
+                <a href="../contract-api-reference/publicresolver.html">
+            
+                    
+                    PublicResolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../contract-api-reference/.eth-permanent-registrar/">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/">
+            
+                    
+                    .eth Permanent Registrar
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                    
+                    Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                    
+                    Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../contract-api-reference/dns-registrar.html">
+            
+                <a href="../contract-api-reference/dns-registrar.html">
+            
+                    
+                    DNS Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                <a href="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                    
+                    Resolving Names On-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../contract-developer-guide/writing-a-resolver.html">
+            
+                <a href="../contract-developer-guide/writing-a-resolver.html">
+            
+                    
+                    Writing a Resolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../contract-developer-guide/writing-a-registrar.html">
+            
+                <a href="../contract-developer-guide/writing-a-registrar.html">
+            
+                    
+                    Writing a Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://discuss.ens.domains">
+            
+                    
+                    ENS Discussion Forum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://discord.gg/AskZbFx">
+            
+                    
+                    ENS Support Chat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ENS Migration (February 2020)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                <a href="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                    
+                    Guide for DApp Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../ens-migration-february-2020/technical-description.html">
+            
+                <a href="../ens-migration-february-2020/technical-description.html">
+            
+                    
+                    Technical Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ENSIP-1: ENS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ensip-1-ens">ENSIP-1: ENS</h1>
+<table>
+<thead>
+<tr>
+<th><strong>Author</strong></th>
+<th>Nick Johnson \<a href="mailto:arachnid@notdot.net" target="_blank">arachnid@notdot.net</a></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Status</strong></td>
+<td>Final</td>
+</tr>
+<tr>
+<td><strong>Created</strong></td>
+<td>2016-04-04</td>
+</tr>
+</tbody>
+</table>
+<h2 id="abstract">Abstract</h2>
+<p>This ENSIP describes the details of the Ethereum Name Service, a proposed protocol and ABI definition that provides flexible resolution of short, human-readable names to service and resource identifiers. This permits users and developers to refer to human-readable and easy to remember names, and permits those names to be updated as necessary when the underlying resource (contract, content-addressed data, etc) changes.</p>
+<p>The goal of domain names is to provide stable, human-readable identifiers that can be used to specify network resources. In this way, users can enter a memorable string, such as &apos;vitalik.wallet&apos; or &apos;www.mysite.swarm&apos;, and be directed to the appropriate resource. The mapping between names and resources may change over time, so a user may change wallets, a website may change hosts, or a swarm document may be updated to a new version, without the domain name changing. Further, a domain need not specify a single resource; different record types allow the same domain to reference different resources. For instance, a browser may resolve &apos;mysite.swarm&apos; to the IP address of its server by fetching its A (address) record, while a mail client may resolve the same address to a mail server by fetching its MX (mail exchanger) record.</p>
+<h2 id="motivation">Motivation</h2>
+<p>Existing <a href="https://github.com/ethereum/wiki/wiki/Registrar-ABI" target="_blank">specifications</a> and <a href="https://ethereum.gitbooks.io/frontier-guide/content/registrar\_services.html" target="_blank">implementations</a> for name resolution in Ethereum provide basic functionality, but suffer several shortcomings that will significantly limit their long-term usefulness:</p>
+<ul>
+<li>A single global namespace for all names with a single &apos;centralised&apos; resolver.</li>
+<li>Limited or no support for delegation and sub-names/sub-domains.</li>
+<li>Only one record type, and no support for associating multiple copies of a record with a domain.</li>
+<li>Due to a single global implementation, no support for multiple different name allocation systems.</li>
+<li>Conflation of responsibilities: Name resolution, registration, and whois information.</li>
+</ul>
+<p>Use-cases that these features would permit include:</p>
+<ul>
+<li>Support for subnames/sub-domains - eg, live.mysite.tld and forum.mysite.tld.</li>
+<li>Multiple services under a single name, such as a DApp hosted in Swarm, a Whisper address, and a mail server.</li>
+<li>Support for DNS record types, allowing blockchain hosting of &apos;legacy&apos; names. This would permit an Ethereum client such as Mist to resolve the address of a traditional website, or the mail server for an email address, from a blockchain name.</li>
+<li>DNS gateways, exposing ENS domains via the Domain Name Service, providing easier means for legacy clients to resolve and connect to blockchain services.</li>
+</ul>
+<p>The first two use-cases, in particular, can be observed everywhere on the present-day internet under DNS, and we believe them to be fundamental features of a name service that will continue to be useful as the Ethereum platform develops and matures.</p>
+<p>The normative parts of this document does not specify an implementation of the proposed system; its purpose is to document a protocol that different resolver implementations can adhere to in order to facilitate consistent name resolution. An appendix provides sample implementations of resolver contracts and libraries, which should be treated as illustrative examples only.</p>
+<p>Likewise, this document does not attempt to specify how domains should be registered or updated, or how systems can find the owner responsible for a given domain. Registration is the responsibility of registrars, and is a governance matter that will necessarily vary between top-level domains.</p>
+<p>Updating of domain records can also be handled separately from resolution. Some systems, such as swarm, may require a well defined interface for updating domains, in which event we anticipate the development of a standard for this.</p>
+<h2 id="specification">Specification</h2>
+<h3 id="overview">Overview</h3>
+<p>The ENS system comprises three main parts:</p>
+<ul>
+<li>The ENS registry</li>
+<li>Resolvers</li>
+<li>Registrars</li>
+</ul>
+<p>The registry is a single contract that provides a mapping from any registered name to the resolver responsible for it, and permits the owner of a name to set the resolver address, and to create subdomains, potentially with different owners to the parent domain.</p>
+<p>Resolvers are responsible for performing resource lookups for a name - for instance, returning a contract address, a content hash, or IP address(es) as appropriate. The resolver specification, defined here and extended in other ENSIPs, defines what methods a resolver may implement to support resolving different types of records.</p>
+<p>Registrars are responsible for allocating domain names to users of the system, and are the only entities capable of updating the ENS; the owner of a node in the ENS registry is its registrar. Registrars may be contracts or externally owned accounts, though it is expected that the root and top-level registrars, at a minimum, will be implemented as contracts.</p>
+<p>Resolving a name in ENS is a two-step process. First, the ENS registry is called with the name to resolve, after hashing it using the procedure described below. If the record exists, the registry returns the address of its resolver. Then, the resolver is called, using the method appropriate to the resource being requested. The resolver then returns the desired result.</p>
+<p>For example, suppose you wish to find the address of the token contract associated with &apos;beercoin.eth&apos;. First, get the resolver:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> node = namehash(<span class="hljs-string">&quot;beercoin.eth&quot;</span>);
+<span class="hljs-keyword">var</span> resolver = ens.resolver(node);
+</code></pre>
+<p>Then, ask the resolver for the address for the contract:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> address = resolver.addr(node);
+</code></pre>
+<p>Because the <code>namehash</code> procedure depends only on the name itself, this can be precomputed and inserted into a contract, removing the need for string manipulation, and permitting O(1) lookup of ENS records regardless of the number of components in the raw name.</p>
+<h3 id="name-syntax">Name Syntax</h3>
+<p>ENS names must conform to the following syntax:</p>
+<pre><code>&lt;domain&gt; ::= &lt;label&gt; | &lt;domain&gt; &quot;.&quot; &lt;label&gt;
+&lt;label&gt; ::= any valid string label per [UTS46](https://unicode.org/reports/tr46/)
+</code></pre><p>In short, names consist of a series of dot-separated labels. Each label must be a valid normalised label as described in <a href="https://unicode.org/reports/tr46/" target="_blank">UTS46</a> with the options <code>transitional=false</code> and <code>useSTD3AsciiRules=true</code>. For Javascript implementations, a <a href="https://www.npmjs.com/package/idna-uts46" target="_blank">library</a> is available that normalises and checks names.</p>
+<p>Note that while upper and lower case letters are allowed in names, the UTS46 normalisation process case-folds labels before hashing them, so two names with different case but identical spelling will produce the same namehash.</p>
+<p>Labels and domains may be of any length, but for compatibility with legacy DNS, it is recommended that labels be restricted to no more than 64 characters each, and complete ENS names to no more than 255 characters. For the same reason, it is recommended that labels do not start or end with hyphens, or start with digits.</p>
+<h3 id="namehash-algorithm">namehash algorithm</h3>
+<p>Before being used in ENS, names are hashed using the &apos;namehash&apos; algorithm. This algorithm recursively hashes components of the name, producing a unique, fixed-length string for any valid input domain. The output of namehash is referred to as a &apos;node&apos;.</p>
+<p>Pseudocode for the namehash algorithm is as follows:</p>
+<pre><code>def namehash(name):
+  if name == &apos;&apos;:
+    return &apos;\0&apos; * 32
+  else:
+    label, _, remainder = name.partition(&apos;.&apos;)
+    return sha3(namehash(remainder) + sha3(label))
+</code></pre><p>Informally, the name is split into labels, each label is hashed. Then, starting with the last component, the previous output is concatenated with the label hash and hashed again. The first component is concatenated with 32 &apos;0&apos; bytes. Thus, &apos;mysite.swarm&apos; is processed as follows:</p>
+<pre><code>node = &apos;\0&apos; * 32
+node = sha3(node + sha3(&apos;swarm&apos;))
+node = sha3(node + sha3(&apos;mysite&apos;))
+</code></pre><p>Implementations should conform to the following test vectors for namehash:</p>
+<pre><code>namehash(&apos;&apos;) = 0x0000000000000000000000000000000000000000000000000000000000000000
+namehash(&apos;eth&apos;) = 0x93cdeb708b7545dc668eb9280176169d1c33cfd8ed6f04690a0bcc88a93fc4ae
+namehash(&apos;foo.eth&apos;) = 0xde9b09fd7c5f901e23a3f19fecc54828e9c848539801e86591bd9801b019f84f
+</code></pre><h3 id="registry-specification">Registry specification</h3>
+<p>The ENS registry contract exposes the following functions:</p>
+<pre><code class="lang-solidity">function owner(bytes32 node) constant returns (address);
+</code></pre>
+<p>Returns the owner (registrar) of the specified node.</p>
+<pre><code class="lang-solidity">function resolver(bytes32 node) constant returns (address);
+</code></pre>
+<p>Returns the resolver for the specified node.</p>
+<pre><code class="lang-solidity">function ttl(bytes32 node) constant returns (uint64);
+</code></pre>
+<p>Returns the time-to-live (TTL) of the node; that is, the maximum duration for which a node&apos;s information may be cached.</p>
+<pre><code class="lang-solidity">function setOwner(bytes32 node, address owner);
+</code></pre>
+<p>Transfers ownership of a node to another registrar. This function may only be called by the current owner of <code>node</code>. A successful call to this function logs the event <code>Transfer(bytes32 indexed, address)</code>.</p>
+<pre><code class="lang-solidity">function setSubnodeOwner(bytes32 node, bytes32 label, address owner);
+</code></pre>
+<p>Creates a new node, <code>sha3(node, label)</code> and sets its owner to <code>owner</code>, or updates the node with a new owner if it already exists. This function may only be called by the current owner of <code>node</code>. A successful call to this function logs the event <code>NewOwner(bytes32 indexed, bytes32 indexed, address)</code>.</p>
+<pre><code class="lang-solidity">function setResolver(bytes32 node, address resolver);
+</code></pre>
+<p>Sets the resolver address for <code>node</code>. This function may only be called by the owner of <code>node</code>. A successful call to this function logs the event <code>NewResolver(bytes32 indexed, address)</code>.</p>
+<pre><code class="lang-solidity">function setTTL(bytes32 node, uint64 ttl);
+</code></pre>
+<p>Sets the TTL for a node. A node&apos;s TTL applies to the &apos;owner&apos; and &apos;resolver&apos; records in the registry, as well as to any information returned by the associated resolver.</p>
+<h3 id="resolver-specification">Resolver specification</h3>
+<p>Resolvers may implement any subset of the record types specified here. Where a record types specification requires a resolver to provide multiple functions, the resolver MUST implement either all or none of them. Resolvers MUST specify a fallback function that throws.</p>
+<p>Resolvers have one mandatory function:</p>
+<pre><code class="lang-solidity">function supportsInterface(bytes4 interfaceID) constant returns (bool)
+</code></pre>
+<p>The <code>supportsInterface</code> function is documented in ENSIP-165, and returns true if the resolver implements the interface specified by the provided 4 byte identifier. An interface identifier consists of the XOR of the function signature hashes of the functions provided by that interface; in the degenerate case of single-function interfaces, it is simply equal to the signature hash of that function. If a resolver returns <code>true</code> for <code>supportsInterface()</code>, it must implement the functions specified in that interface.</p>
+<p><code>supportsInterface</code> must always return true for <code>0x01ffc9a7</code>, which is the interface ID of <code>supportsInterface</code> itself.</p>
+<p>Currently standardised resolver interfaces are specified in the table below.</p>
+<p>The following interfaces are defined:</p>
+<table>
+<thead>
+<tr>
+<th>Interface name</th>
+<th>Interface hash</th>
+<th>Specification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>addr</code></td>
+<td>0x3b3b57de</td>
+<td>Contract address</td>
+</tr>
+<tr>
+<td><code>name</code></td>
+<td>0x691f3431</td>
+<td><a href="ensip-3-reverse-resolution.html">ENSIP-3</a></td>
+</tr>
+<tr>
+<td><code>ABI</code></td>
+<td>0x2203ab56</td>
+<td><a href="ensip-4-support-for-contract-abis.html">ENSIP-4</a></td>
+</tr>
+<tr>
+<td>text</td>
+<td>0x59d1d43c</td>
+<td><a href="ensip-5-text-records.html">ENSIP-5</a></td>
+</tr>
+<tr>
+<td>contenthash</td>
+<td>0xbc1c58d1</td>
+<td><a href="ensip-7-contenthash-field.html">ENSIP-7</a></td>
+</tr>
+<tr>
+<td>interfaceImplementer</td>
+<td>0xb8f2bbb4</td>
+<td><a href="ensip-8-interface-discovery.html">ENSIP-8</a></td>
+</tr>
+<tr>
+<td>addr(bytes32,uint256)</td>
+<td>0xf1cb7e06</td>
+<td><a href="ensip-9-multichain-address-resolution.html">ENSIP-9</a></td>
+</tr>
+</tbody>
+</table>
+<p>ENSIPs may define new interfaces to be added to this registry.</p>
+<h4 id="contract-address-interface-">Contract Address Interface <a href="#addr" id="addr"></a></h4>
+<p>Resolvers wishing to support contract address resources must provide the following function:</p>
+<pre><code class="lang-solidity">function addr(bytes32 node) constant returns (address);
+</code></pre>
+<p>If the resolver supports <code>addr</code> lookups but the requested node does not have an addr record, the resolver MUST return the zero address.</p>
+<p>Clients resolving the <code>addr</code> record MUST check for a zero return value, and treat this in the same manner as a name that does not have a resolver specified - that is, refuse to send funds to or interact with the address. Failure to do this can result in users accidentally sending funds to the 0 address.</p>
+<p>Changes to an address MUST trigger the following event:</p>
+<pre><code class="lang-solidity">event AddrChanged(bytes32 indexed node, address a);
+</code></pre>
+<h2 id="appendix-a-registry-implementation">Appendix A: Registry Implementation</h2>
+<pre><code class="lang-solidity">contract ENS {
+    struct Record {
+        address owner;
+        address resolver;
+        uint64 ttl;
+    }
+
+    mapping(bytes32=&gt;Record) records;
+
+    event NewOwner(bytes32 indexed node, bytes32 indexed label, address owner);
+    event Transfer(bytes32 indexed node, address owner);
+    event NewResolver(bytes32 indexed node, address resolver);
+
+    modifier only_owner(bytes32 node) {
+        if(records[node].owner != msg.sender) throw;
+        _
+    }
+
+    function ENS(address owner) {
+        records[0].owner = owner;
+    }
+
+    function owner(bytes32 node) constant returns (address) {
+        return records[node].owner;
+    }
+
+    function resolver(bytes32 node) constant returns (address) {
+        return records[node].resolver;
+    }
+
+    function ttl(bytes32 node) constant returns (uint64) {
+        return records[node].ttl;
+    }
+
+    function setOwner(bytes32 node, address owner) only_owner(node) {
+        Transfer(node, owner);
+        records[node].owner = owner;
+    }
+
+    function setSubnodeOwner(bytes32 node, bytes32 label, address owner) only_owner(node) {
+        var subnode = sha3(node, label);
+        NewOwner(node, label, owner);
+        records[subnode].owner = owner;
+    }
+
+    function setResolver(bytes32 node, address resolver) only_owner(node) {
+        NewResolver(node, resolver);
+        records[node].resolver = resolver;
+    }
+
+    function setTTL(bytes32 node, uint64 ttl) only_owner(node) {
+        NewTTL(node, ttl);
+        records[node].ttl = ttl;
+    }
+}
+</code></pre>
+<h2 id="appendix-b-sample-resolver-implementations">Appendix B: Sample Resolver Implementations</h2>
+<h4 id="built-in-resolver">Built-in resolver</h4>
+<p>The simplest possible resolver is a contract that acts as its own name resolver by implementing the contract address resource profile:</p>
+<pre><code class="lang-solidity">contract DoSomethingUseful {
+    // Other code
+
+    function addr(bytes32 node) constant returns (address) {
+        return this;
+    }
+
+    function supportsInterface(bytes4 interfaceID) constant returns (bool) {
+        return interfaceID == 0x3b3b57de || interfaceID == 0x01ffc9a7;
+    }
+
+    function() {
+        throw;
+    }
+}
+</code></pre>
+<p>Such a contract can be inserted directly into the ENS registry, eliminating the need for a separate resolver contract in simple use-cases. However, the requirement to &apos;throw&apos; on unknown function calls may interfere with normal operation of some types of contract.</p>
+<h4 id="standalone-resolver">Standalone resolver</h4>
+<p>A basic resolver that implements the contract address profile, and allows only its owner to update records:</p>
+<pre><code class="lang-solidity">contract Resolver {
+    event AddrChanged(bytes32 indexed node, address a);
+
+    address owner;
+    mapping(bytes32=&gt;address) addresses;
+
+    modifier only_owner() {
+        if(msg.sender != owner) throw;
+        _
+    }
+
+    function Resolver() {
+        owner = msg.sender;
+    }
+
+    function addr(bytes32 node) constant returns(address) {
+        return addresses[node];    
+    }
+
+    function setAddr(bytes32 node, address addr) only_owner {
+        addresses[node] = addr;
+        AddrChanged(node, addr);
+    }
+
+    function supportsInterface(bytes4 interfaceID) constant returns (bool) {
+        return interfaceID == 0x3b3b57de || interfaceID == 0x01ffc9a7;
+    }
+
+    function() {
+        throw;
+    }
+}
+</code></pre>
+<p>After deploying this contract, use it by updating the ENS registry to reference this contract for a name, then calling <code>setAddr()</code> with the same node to set the contract address it will resolve to.</p>
+<h4 id="public-resolver">Public resolver</h4>
+<p>Similar to the resolver above, this contract only supports the contract address profile, but uses the ENS registry to determine who should be allowed to update entries:</p>
+<pre><code class="lang-solidity">contract PublicResolver {
+    event AddrChanged(bytes32 indexed node, address a);
+    event ContentChanged(bytes32 indexed node, bytes32 hash);
+
+    ENS ens;
+    mapping(bytes32=&gt;address) addresses;
+
+    modifier only_owner(bytes32 node) {
+        if(ens.owner(node) != msg.sender) throw;
+        _
+    }
+
+    function PublicResolver(address ensAddr) {
+        ens = ENS(ensAddr);
+    }
+
+    function addr(bytes32 node) constant returns (address ret) {
+        ret = addresses[node];
+    }
+
+    function setAddr(bytes32 node, address addr) only_owner(node) {
+        addresses[node] = addr;
+        AddrChanged(node, addr);
+    }
+
+    function supportsInterface(bytes4 interfaceID) constant returns (bool) {
+        return interfaceID == 0x3b3b57de || interfaceID == 0x01ffc9a7;
+    }
+
+    function() {
+        throw;
+    }
+}
+</code></pre>
+<h2 id="appendix-c-sample-registrar-implementation">Appendix C: Sample Registrar Implementation</h2>
+<p>This registrar allows users to register names at no cost if they are the first to request them.</p>
+<pre><code class="lang-solidity">contract FIFSRegistrar {
+    ENS ens;
+    bytes32 rootNode;
+
+    function FIFSRegistrar(address ensAddr, bytes32 node) {
+        ens = ENS(ensAddr);
+        rootNode = node;
+    }
+
+    function register(bytes32 subnode, address owner) {
+        var node = sha3(rootNode, subnode);
+        var currentOwner = ens.owner(node);
+        if(currentOwner != 0 &amp;&amp; currentOwner != msg.sender)
+            throw;
+
+        ens.setSubnodeOwner(rootNode, subnode, owner);
+    }
+}
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: ENS Improvement Proposals">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ensip-2-initial-hash-registrar.html" class="navigation navigation-next " aria-label="Next page: ENSIP-2: Initial Hash Registrar">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"description":"Documentation of the basic ENS protocol (formerly EIP-137).","title":"ENSIP-1: ENS","level":"1.9.1","depth":2,"next":{"title":"ENSIP-2: Initial Hash Registrar","level":"1.9.2","depth":2,"path":"ens-improvement-proposals/ensip-2-initial-hash-registrar.md","ref":"ens-improvement-proposals/ensip-2-initial-hash-registrar.md","articles":[]},"previous":{"title":"ENS Improvement Proposals","level":"1.9","depth":1,"path":"ens-improvement-proposals/README.md","ref":"ens-improvement-proposals/README.md","articles":[{"title":"ENSIP-1: ENS","level":"1.9.1","depth":2,"path":"ens-improvement-proposals/ensip-1-ens.md","ref":"ens-improvement-proposals/ensip-1-ens.md","articles":[]},{"title":"ENSIP-2: Initial Hash Registrar","level":"1.9.2","depth":2,"path":"ens-improvement-proposals/ensip-2-initial-hash-registrar.md","ref":"ens-improvement-proposals/ensip-2-initial-hash-registrar.md","articles":[]},{"title":"ENSIP-3: Reverse Resolution","level":"1.9.3","depth":2,"path":"ens-improvement-proposals/ensip-3-reverse-resolution.md","ref":"ens-improvement-proposals/ensip-3-reverse-resolution.md","articles":[]},{"title":"ENSIP-4: Support for contract ABIs","level":"1.9.4","depth":2,"path":"ens-improvement-proposals/ensip-4-support-for-contract-abis.md","ref":"ens-improvement-proposals/ensip-4-support-for-contract-abis.md","articles":[]},{"title":"ENSIP-5: Text Records","level":"1.9.5","depth":2,"path":"ens-improvement-proposals/ensip-5-text-records.md","ref":"ens-improvement-proposals/ensip-5-text-records.md","articles":[]},{"title":"ENSIP-6: DNS-in-ENS","level":"1.9.6","depth":2,"path":"ens-improvement-proposals/ensip-6-dns-in-ens.md","ref":"ens-improvement-proposals/ensip-6-dns-in-ens.md","articles":[]},{"title":"ENSIP-7: Contenthash field","level":"1.9.7","depth":2,"path":"ens-improvement-proposals/ensip-7-contenthash-field.md","ref":"ens-improvement-proposals/ensip-7-contenthash-field.md","articles":[]},{"title":"ENSIP-8: Interface Discovery","level":"1.9.8","depth":2,"path":"ens-improvement-proposals/ensip-8-interface-discovery.md","ref":"ens-improvement-proposals/ensip-8-interface-discovery.md","articles":[]},{"title":"ENSIP-9: Multichain Address Resolution","level":"1.9.9","depth":2,"path":"ens-improvement-proposals/ensip-9-multichain-address-resolution.md","ref":"ens-improvement-proposals/ensip-9-multichain-address-resolution.md","articles":[]},{"title":"ENSIP-10: Wildcard Resolution","level":"1.9.10","depth":2,"path":"ens-improvement-proposals/ensip-10-wildcard-resolution.md","ref":"ens-improvement-proposals/ensip-10-wildcard-resolution.md","articles":[]},{"title":"ENSIP-11: EVM compatible Chain Address Resolution","level":"1.9.11","depth":2,"path":"ens-improvement-proposals/ensip-11-evmchain-address-resolution.md","ref":"ens-improvement-proposals/ensip-11-evmchain-address-resolution.md","articles":[]},{"title":"ENSIP-12: Avatar Text Records","level":"1.9.12","depth":2,"path":"ens-improvement-proposals/ensip-12-avatar-text-records.md","ref":"ens-improvement-proposals/ensip-12-avatar-text-records.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"ens-improvement-proposals/ensip-1-ens.md","mtime":"2022-05-06T01:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T01:02:36.125Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

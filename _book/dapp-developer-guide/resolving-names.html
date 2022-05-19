@@ -1,0 +1,1040 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Resolving Names · GitBook</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="managing-names.html" />
+    
+    
+    <link rel="prev" href="working-with-ens.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../terminology.html">
+            
+                <a href="../terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../frequently-asked-questions.html">
+            
+                <a href="../frequently-asked-questions.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ens-deployments.html">
+            
+                <a href="../ens-deployments.html">
+            
+                    
+                    ENS Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../permanent-registrar-faq.html">
+            
+                <a href="../permanent-registrar-faq.html">
+            
+                    
+                    Registrar Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../deploying-ens-on-a-private-chain.html">
+            
+                <a href="../deploying-ens-on-a-private-chain.html">
+            
+                    
+                    Deploying ENS on a Private Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dns-registrar-guide.html">
+            
+                <a href="../dns-registrar-guide.html">
+            
+                    
+                    DNS Registrar guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../bug-bounty-program.html">
+            
+                <a href="../bug-bounty-program.html">
+            
+                    
+                    Bug Bounty Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ens-improvement-proposals/">
+            
+                <a href="../ens-improvement-proposals/">
+            
+                    
+                    ENS Improvement Proposals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ens-improvement-proposals/ensip-1-ens.html">
+            
+                <a href="../ens-improvement-proposals/ensip-1-ens.html">
+            
+                    
+                    ENSIP-1: ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                <a href="../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                    
+                    ENSIP-2: Initial Hash Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                    
+                    ENSIP-3: Reverse Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                <a href="../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                    
+                    ENSIP-4: Support for contract ABIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                <a href="../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                    
+                    ENSIP-5: Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                <a href="../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                    
+                    ENSIP-6: DNS-in-ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                <a href="../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                    
+                    ENSIP-7: Contenthash field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                <a href="../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                    
+                    ENSIP-8: Interface Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                    
+                    ENSIP-9: Multichain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                    
+                    ENSIP-10: Wildcard Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                    
+                    ENSIP-11: EVM compatible Chain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                <a href="../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                    
+                    ENSIP-12: Avatar Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ens-enabling-your-dapp.html">
+            
+                <a href="ens-enabling-your-dapp.html">
+            
+                    
+                    ENS Enabling your DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ens-libraries.html">
+            
+                <a href="ens-libraries.html">
+            
+                    
+                    ENS Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="working-with-ens.html">
+            
+                <a href="working-with-ens.html">
+            
+                    
+                    Working with ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.4" data-path="resolving-names.html">
+            
+                <a href="resolving-names.html">
+            
+                    
+                    Resolving Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="managing-names.html">
+            
+                <a href="managing-names.html">
+            
+                    
+                    Managing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="registering-and-renewing-names.html">
+            
+                <a href="registering-and-renewing-names.html">
+            
+                    
+                    Registering & Renewing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="front-end-design-guidelines.html">
+            
+                <a href="front-end-design-guidelines.html">
+            
+                    
+                    ENS Front-End Design Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="ens-as-nft.html">
+            
+                <a href="ens-as-nft.html">
+            
+                    
+                    ENS as NFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="ens-l2-offchain.html">
+            
+                <a href="ens-l2-offchain.html">
+            
+                    
+                    ENS Layer2 and offchain data support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../contract-api-reference/name-processing.html">
+            
+                <a href="../contract-api-reference/name-processing.html">
+            
+                    
+                    Name Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../contract-api-reference/ens.html">
+            
+                <a href="../contract-api-reference/ens.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../contract-api-reference/reverseregistrar.html">
+            
+                <a href="../contract-api-reference/reverseregistrar.html">
+            
+                    
+                    ReverseRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../contract-api-reference/testregistrar.html">
+            
+                <a href="../contract-api-reference/testregistrar.html">
+            
+                    
+                    TestRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../contract-api-reference/publicresolver.html">
+            
+                <a href="../contract-api-reference/publicresolver.html">
+            
+                    
+                    PublicResolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../contract-api-reference/.eth-permanent-registrar/">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/">
+            
+                    
+                    .eth Permanent Registrar
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                    
+                    Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                    
+                    Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../contract-api-reference/dns-registrar.html">
+            
+                <a href="../contract-api-reference/dns-registrar.html">
+            
+                    
+                    DNS Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                <a href="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                    
+                    Resolving Names On-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../contract-developer-guide/writing-a-resolver.html">
+            
+                <a href="../contract-developer-guide/writing-a-resolver.html">
+            
+                    
+                    Writing a Resolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../contract-developer-guide/writing-a-registrar.html">
+            
+                <a href="../contract-developer-guide/writing-a-registrar.html">
+            
+                    
+                    Writing a Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://discuss.ens.domains">
+            
+                    
+                    ENS Discussion Forum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://discord.gg/AskZbFx">
+            
+                    
+                    ENS Support Chat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ENS Migration (February 2020)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                <a href="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                    
+                    Guide for DApp Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../ens-migration-february-2020/technical-description.html">
+            
+                <a href="../ens-migration-february-2020/technical-description.html">
+            
+                    
+                    Technical Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Resolving Names</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="resolving-names">Resolving Names</h1>
+<p>The ENS namespace includes both .eth names (which are native to ENS) and DNS names imported into ENS. Because the DNS suffix namespace expands over time, a hardcoded list of name suffixes for recognizing ENS names will regularly be out of date, leading to your application not recognizing all valid ENS names. To remain future-proof, <strong>a correct integration of ENS treats any dot-separated name as a potential ENS name and will attempt a look-up</strong>.</p>
+<h2 id="looking-up-cryptocurrency-addresses">Looking up cryptocurrency addresses</h2>
+<p>Names can have many types of data associated with them; the most common is cryptocurrency addresses. ENS supports storing and resolving the addresses of any arbitrary blockchain.</p>
+<p><strong>Resolving a name to an Ethereum address</strong> using a library is simple:</p>
+<p>Resolution without a library is a three step process:</p>
+<ol>
+<li>Normalise and hash the name - see <a href="../contract-api-reference/name-processing.html">name processing</a> for details.</li>
+<li>Call <code>resolver()</code> on the ENS registry, passing in the output of step 1. This returns the address of the resolver responsible for the name.</li>
+<li>Using the <a href="https://github.com/ensdomains/resolvers/blob/master/contracts/Resolver.sol" target="_blank">resolver interface</a>, call <code>addr()</code> on the resolver address returned in step 2, passing in the hashed name calculated in step 1.</li>
+</ol>
+<p><strong>Resolution support for the addresses of other blockchains</strong> is implemented with an additional overload on <code>addr()</code>. To resolve a non-Ethereum address, supply both the namehash and the <a href="https://github.com/satoshilabs/slips/blob/master/slip-0044.md" target="_blank">SLIP44</a> chain ID of the cryptocurrency whose address you want to resolve. For example, to resolve a Bitcoin address, you would call <code>addr(hash, 0)</code>. Note that the returned address will be in binary representation, and so will need decoding to a text-format address; for details, see <a href="https://eips.ethereum.org/EIPS/eip-2304" target="_blank">EIP 2304</a>.</p>
+<p>If you are resolving addr() records, you MUST treat a return value from the resolver of 0x00&#x2026;00 as that record being unset. Failing to do so could result in users accidentally sending funds to the null address if they have configured a resolver in ENS, but not set the resolver record!</p>
+<h2 id="looking-up-other-resources">Looking up other resources</h2>
+<p>ENS supports many types of resources besides Ethereum addresses, including other cryptocurrency addresses, content hashes (hashes for IPFS, Skynet, and Swarm, and Tor .onion addresses), contract interfaces (ABIs), and text-based metadata. The process for looking these up varies from library to library; for specific details see your chosen library&apos;s documentation.</p>
+<p>Resolving these content types without a library follows the same 3-step process detailed above; simply call the relevant method on the resolver in step 3 instead of <code>addr()</code>.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Getting contenthash</span>
+<span class="hljs-keyword">await</span> ens.name(<span class="hljs-string">&apos;abittooawesome.eth&apos;</span>).getContent()
+<span class="hljs-comment">// Setting contenthash</span>
+<span class="hljs-keyword">await</span> ens.name(<span class="hljs-string">&apos;abittooawesome.eth&apos;</span>).setContenthash(contentHash)
+
+<span class="hljs-comment">// Getting other coins</span>
+<span class="hljs-keyword">await</span> ens.name(<span class="hljs-string">&apos;brantly.eth&apos;</span>).getAddress(<span class="hljs-string">&apos;BTC&apos;</span>)
+<span class="hljs-comment">// Setting other coins</span>
+<span class="hljs-keyword">await</span> ens.name(<span class="hljs-string">&apos;superawesome.eth&apos;</span>).setAddress(<span class="hljs-string">&apos;ETC&apos;</span>, <span class="hljs-string">&apos;0x0000000000000000000000000000000000012345&apos;</span>)
+<span class="hljs-comment">// Getting text</span>
+<span class="hljs-keyword">await</span> ens.name(<span class="hljs-string">&apos;resolver.eth&apos;</span>).getText(<span class="hljs-string">&apos;url&apos;</span>)
+<span class="hljs-comment">// Setting text</span>
+<span class="hljs-keyword">await</span> ens.name(<span class="hljs-string">&apos;superawesome.eth&apos;</span>).setText(<span class="hljs-string">&apos;url&apos;</span>, <span class="hljs-string">&apos;http://google.com&apos;</span>)
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Getting contenthash</span>
+web3.eth.ens.getContenthash(<span class="hljs-string">&apos;ethereum.eth&apos;</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">result</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(result);
+});
+<span class="hljs-comment">// Setting contenthash</span>
+web3.eth.ens.setContenthash(<span class="hljs-string">&apos;ethereum.eth&apos;</span>, hash);
+</code></pre>
+<pre><code class="lang-javascript">Not supported.
+</code></pre>
+<pre><code class="lang-javascript">  <span class="hljs-keyword">const</span> resolver = <span class="hljs-keyword">await</span> provider.getResolver(<span class="hljs-string">&apos;abittooawesome.eth&apos;</span>);
+  <span class="hljs-keyword">const</span> contentHash = <span class="hljs-keyword">await</span> resolver.getContentHash();
+  <span class="hljs-keyword">const</span> btcAddress = <span class="hljs-keyword">await</span> resolver.getAddress(<span class="hljs-number">0</span>);
+  <span class="hljs-keyword">const</span> dogeAddress = <span class="hljs-keyword">await</span> resolver.getAddress(<span class="hljs-number">3</span>);
+  <span class="hljs-keyword">const</span> email = <span class="hljs-keyword">await</span> resolver.getText(<span class="hljs-string">&quot;email&quot;</span>);
+</code></pre>
+<pre><code class="lang-go"><span class="hljs-comment">// Encoding</span>
+bin, err := ens.StringToContenthash(<span class="hljs-string">&quot;/ipfs/QmayQq2DWCkY3d4x3xKh4suohuRPEXe2fBqMBam5xtDj3t&quot;</span>)
+<span class="hljs-comment">// Setting contenthash</span>
+resolver.SetContenthash(opts, data)
+<span class="hljs-comment">// Getting contenthash</span>
+resolver.Contenthash()
+<span class="hljs-comment">// Decoding</span>
+repr, err := ens.ContenthashToString(bin)
+
+<span class="hljs-comment">// Getting Multicoin</span>
+btcAddress, err := resolver.MultiAddress(<span class="hljs-number">0</span>)
+<span class="hljs-comment">// Setting Multicoin</span>
+resolver.SetMultiAddress(opts, address)
+
+<span class="hljs-comment">// Setting text</span>
+resolver.SetText(opts, name, value)
+<span class="hljs-comment">// Getting text</span>
+resolver.Text(name)
+</code></pre>
+<pre><code>Not supported.
+</code></pre><pre><code class="lang-java">Not supported.
+</code></pre>
+<h3 id="encoding-and-decoding-contenthash">Encoding and decoding contenthash</h3>
+<p><code>contenthash</code> is used to store IPFSand Swarm content hashes, which permit resolving ENS addresses to distributed content (eg, websites) hosted on these distributed networks. <a href="https://github.com/ensdomains/content-hash" target="_blank">content-hash</a> javascript library provides a convenient way to encode/decode these hashes.</p>
+<pre><code class="lang-javascript"> <span class="hljs-keyword">const</span> contentHash = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;content-hash&apos;</span>)
+<span class="hljs-keyword">const</span> encoded = <span class="hljs-string">&apos;e3010170122029f2d17be6139079dc48696d1f582a8530eb9805b561eda517e22a892c7e3f1f&apos;</span>
+<span class="hljs-keyword">const</span> content = contentHash.decode(encoded)
+<span class="hljs-comment">// &apos;QmRAQB6YaCyidP37UdDnjFY5vQuiBrcqdyoW1CuDgwxkD4&apos;</span>
+
+<span class="hljs-keyword">const</span> onion = <span class="hljs-string">&apos;zqktlwi4fecvo6ri&apos;</span>
+contentHash.encode(<span class="hljs-string">&apos;onion&apos;</span>, onion);
+<span class="hljs-comment">// &apos;bc037a716b746c776934666563766f367269&apos;</span>
+
+<span class="hljs-keyword">const</span> encoded = <span class="hljs-string">&apos;e40101701b20d1de9994b4d039f6548d191eb26786769f580809256b4685ef316805265ea162&apos;</span>
+
+<span class="hljs-keyword">const</span> codec = contentHash.getCodec(encoded) <span class="hljs-comment">// &apos;swarm-ns&apos;</span>
+codec === <span class="hljs-string">&apos;ipfs-ns&apos;</span> <span class="hljs-comment">// false</span>
+</code></pre>
+<p>Note for ipns: For security reasons, the encoding of ipns is only allowed for <code>libp2p-key</code> codec. Decoding with other formats will show a deprecation warning. Please read <a href="https://github.com/ensdomains/content-hash/pull/5" target="_blank">here</a> for more detail.</p>
+<h3 id="coin-type-and-encodingdecoding">Coin type and encoding/decoding</h3>
+<p>While some libraries allow you to query cryptocurrency addresses via their symbol (e.g.: <code>BTC</code>), others do not have the built-in support, and you have to call via each coin id (e.g.: <code>0</code> for <code>BTC</code>, <code>16</code> for `ETH). For Javascript/Typescript, we have <a href="https://github.com/ensdomains/address-encoder" target="_blank">@ensdomains/address-encoder</a> library that allows you to convert</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> { formatsByName, formatsByCoinType } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@ensdomains/address-encoder&apos;</span>;
+
+formatsByName[<span class="hljs-string">&apos;BTC&apos;</span>]
+<span class="hljs-comment">// {</span>
+<span class="hljs-comment">//   coinType: 0,</span>
+<span class="hljs-comment">//   decoder: [Function (anonymous)],</span>
+<span class="hljs-comment">//   encoder: [Function (anonymous)],</span>
+<span class="hljs-comment">//   name: &apos;BTC&apos;</span>
+<span class="hljs-comment">// }</span>
+</code></pre>
+<p>To save storage space as well as prevent users from setting wrong token address, the library has <code>encoder</code> and <code>decoder</code></p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> data = formatsByName[<span class="hljs-string">&apos;BTC&apos;</span>].decoder(<span class="hljs-string">&apos;1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa&apos;</span>);
+<span class="hljs-built_in">console</span>.log(data.toString(<span class="hljs-string">&apos;hex&apos;</span>)); <span class="hljs-comment">// 76a91462e907b15cbf27d5425399ebf6f0fb50ebb88f1888ac</span>
+<span class="hljs-keyword">const</span> addr = formatsByCoinType[<span class="hljs-number">0</span>].encoder(data);
+<span class="hljs-built_in">console</span>.log(addr); <span class="hljs-comment">// 1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa</span>
+</code></pre>
+<h3 id="listing-cryptocurrency-addresses-and-text-records">Listing cryptocurrency addresses and text records</h3>
+<p>For cryptocurrency addresses and text records, you need to know the coin type or key names to get the value. If you want to list down all the cryptocurrency addresses and text records the user has set, you have to either retrieve the information from <code>Event</code> or query via <a href="https://thegraph.com/explorer/subgraph/ensdomains/ens" target="_blank">ENS subgraph</a>.</p>
+<p>For example</p>
+<pre><code class="lang-javascript">{
+  domains(where:{name:<span class="hljs-string">&quot;vitalik.eth&quot;</span>}) {
+    id
+    name
+    resolver{
+      texts
+      coinTypes
+    }
+  }
+}
+</code></pre>
+<p>will return the following result</p>
+<pre><code class="lang-javascript">{
+  <span class="hljs-string">&quot;data&quot;</span>: {
+    <span class="hljs-string">&quot;domains&quot;</span>: [
+      {
+        <span class="hljs-string">&quot;id&quot;</span>: <span class="hljs-string">&quot;0xee6c4522aab0003e8d14cd40a6af439055fd2577951148c14b6cea9a53475835&quot;</span>,
+        <span class="hljs-string">&quot;name&quot;</span>: <span class="hljs-string">&quot;vitalik.eth&quot;</span>,
+        <span class="hljs-string">&quot;resolver&quot;</span>: {
+          <span class="hljs-string">&quot;coinTypes&quot;</span>: [
+            <span class="hljs-number">60</span>
+          ],
+          <span class="hljs-string">&quot;texts&quot;</span>: [
+            <span class="hljs-string">&quot;url&quot;</span>
+          ]
+        }
+      }
+    ]
+  }
+}
+</code></pre>
+<h2 id="reverse-resolution">Reverse Resolution</h2>
+<p>While &apos;regular&apos; resolution involves mapping from a name to an address, reverse resolution maps from an address back to a name. ENS supports reverse resolution to allow applications to display ENS names in place of hexadecimal addresses.</p>
+<p>Reverse resolution is accomplished via the special purpose domain <em>addr.reverse</em> and the resolver function <code>name()</code>. <em>addr.reverse</em> is owned by a special purpose registrar contract that allocates subdomains to the owner of the matching address - for instance, the address <em>0x314159265dd8dbb310642f98f50c066173c1259b</em> may claim the name <em>314159265dd8dbb310642f98f50c066173c1259b.addr.reverse</em>, and configure a resolver and records on it. The resolver in turn supports the <code>name()</code> function, which returns the name associated with that address.</p>
+<p>ENS does not enforce the accuracy of reverse records - for instance, anyone may claim that the name for their address is &apos;alice.eth&apos;. To be certain that the claim is accurate, you must always perform a forward resolution for the returned name and check it matches the original address.</p>
+<p>Most libraries provide functionality for doing reverse resolution:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> address = <span class="hljs-string">&apos;0x1234...&apos;</span>;
+<span class="hljs-keyword">let</span> ensName = <span class="hljs-literal">null</span>;
+({ name: ensName } = <span class="hljs-keyword">await</span> ens.getName(address))
+<span class="hljs-comment">// Check to be sure the reverse record is correct. skip check if the name is null</span>
+<span class="hljs-keyword">if</span>(ensName == <span class="hljs-literal">null</span> || address != <span class="hljs-keyword">await</span> ens.name(ensName).getAddress()) {
+  ensName = <span class="hljs-literal">null</span>;
+}
+</code></pre>
+<p>Not supported.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> address = <span class="hljs-string">&apos;0x1234...&apos;</span>;
+<span class="hljs-keyword">var</span> name = <span class="hljs-keyword">await</span> ens.reverse(address);
+<span class="hljs-comment">// Check to be sure the reverse record is correct.</span>
+<span class="hljs-keyword">if</span>(address != <span class="hljs-keyword">await</span> ens.lookup(name)) {
+  name = <span class="hljs-literal">null</span>;
+}
+</code></pre>
+<pre><code>var address = &apos;0x1234...&apos;;
+var name = await provider.lookupAddress(address);
+// ethers.js automatically checks that the forward resolution matches.
+</code></pre><pre><code class="lang-go">name, err := ens.ReverseResolve(client, common.HexToAddress(<span class="hljs-string">&quot;0x1234...&quot;</span>)
+</code></pre>
+<pre><code class="lang-python">address = <span class="hljs-string">&apos;0x1234...&apos;</span>
+name = ns.reverse(address)
+<span class="hljs-comment"># Check to be sure the reverse record is correct.</span>
+<span class="hljs-keyword">if</span> address != ns.address(name):
+  name = <span class="hljs-keyword">None</span>
+</code></pre>
+<pre><code class="lang-java">String address = <span class="hljs-string">&quot;0x1234...&quot;</span>;
+String name = ens.reverseResolve(address);
+<span class="hljs-comment">// Check to be sure the reverse record is correct.</span>
+<span class="hljs-keyword">if</span>(address != ens.resolve(name)) {
+  name = <span class="hljs-keyword">null</span>;
+}
+</code></pre>
+<p>Reverse resolution without a library follows the same pattern as forward resolution: Get the resolver for <code>1234....addr.reverse</code>(where <em>1234...</em> is the address you want to reverse-resolve), and call the <code>name()</code> function on that resolver. Then, perform a forward resolution to verify the record is accurate.</p>
+<p>If you need to process many addresses (eg: showing reverse record of transaction histories), resolving both reverse and forward resolution for each item may not be practical. We have a seperate smart contract called <a href="https://github.com/ensdomains/reverse-records" target="_blank"><code>ReverseRecords</code></a> which allows you to lookup multiple names in one function call.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> namehash = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eth-ens-namehash&apos;</span>);
+<span class="hljs-keyword">const</span> allnames = <span class="hljs-keyword">await</span> ReverseRecords.getNames([<span class="hljs-string">&apos;0x123&apos;</span>,<span class="hljs-string">&apos;0x124&apos;</span>])
+<span class="hljs-keyword">const</span> validNames = allnames.filter((n) =&gt; namehash.normalize(n) === n )
+</code></pre>
+<p>Make sure to compare that the returned names match with the normalised names to prevent from <a href="https://en.wikipedia.org/wiki/IDN\_homograph\_attack" target="_blank">homograph attack</a> as well as people simply using capital letters.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="working-with-ens.html" class="navigation navigation-prev " aria-label="Previous page: Working with ENS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="managing-names.html" class="navigation navigation-next " aria-label="Next page: Managing Names">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Resolving Names","level":"2.4","depth":1,"next":{"title":"Managing Names","level":"2.5","depth":1,"path":"dapp-developer-guide/managing-names.md","ref":"dapp-developer-guide/managing-names.md","articles":[]},"previous":{"title":"Working with ENS","level":"2.3","depth":1,"path":"dapp-developer-guide/working-with-ens.md","ref":"dapp-developer-guide/working-with-ens.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"dapp-developer-guide/resolving-names.md","mtime":"2022-05-18T10:38:51.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T01:02:36.125Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
