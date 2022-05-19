@@ -1,0 +1,942 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ENS as NFT · ENSdocs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="a">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="ens-l2-offchain.html" />
+    
+    
+    <link rel="prev" href="front-end-design-guidelines.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../terminology.html">
+            
+                <a href="../terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../frequently-asked-questions.html">
+            
+                <a href="../frequently-asked-questions.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ens-deployments.html">
+            
+                <a href="../ens-deployments.html">
+            
+                    
+                    ENS Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../permanent-registrar-faq.html">
+            
+                <a href="../permanent-registrar-faq.html">
+            
+                    
+                    Registrar Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../deploying-ens-on-a-private-chain.html">
+            
+                <a href="../deploying-ens-on-a-private-chain.html">
+            
+                    
+                    Deploying ENS on a Private Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dns-registrar-guide.html">
+            
+                <a href="../dns-registrar-guide.html">
+            
+                    
+                    DNS Registrar guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../bug-bounty-program.html">
+            
+                <a href="../bug-bounty-program.html">
+            
+                    
+                    Bug Bounty Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ens-improvement-proposals/">
+            
+                <a href="../ens-improvement-proposals/">
+            
+                    
+                    ENS Improvement Proposals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ens-improvement-proposals/ensip-1-ens.html">
+            
+                <a href="../ens-improvement-proposals/ensip-1-ens.html">
+            
+                    
+                    ENSIP-1: ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                <a href="../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                    
+                    ENSIP-2: Initial Hash Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                    
+                    ENSIP-3: Reverse Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                <a href="../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                    
+                    ENSIP-4: Support for contract ABIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                <a href="../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                    
+                    ENSIP-5: Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                <a href="../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                    
+                    ENSIP-6: DNS-in-ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                <a href="../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                    
+                    ENSIP-7: Contenthash field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                <a href="../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                    
+                    ENSIP-8: Interface Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                    
+                    ENSIP-9: Multichain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                    
+                    ENSIP-10: Wildcard Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                    
+                    ENSIP-11: EVM compatible Chain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                <a href="../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                    
+                    ENSIP-12: Avatar Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ens-enabling-your-dapp.html">
+            
+                <a href="ens-enabling-your-dapp.html">
+            
+                    
+                    ENS Enabling your DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ens-libraries.html">
+            
+                <a href="ens-libraries.html">
+            
+                    
+                    ENS Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="working-with-ens.html">
+            
+                <a href="working-with-ens.html">
+            
+                    
+                    Working with ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="resolving-names.html">
+            
+                <a href="resolving-names.html">
+            
+                    
+                    Resolving Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="managing-names.html">
+            
+                <a href="managing-names.html">
+            
+                    
+                    Managing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="registering-and-renewing-names.html">
+            
+                <a href="registering-and-renewing-names.html">
+            
+                    
+                    Registering & Renewing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="front-end-design-guidelines.html">
+            
+                <a href="front-end-design-guidelines.html">
+            
+                    
+                    ENS Front-End Design Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.8" data-path="ens-as-nft.html">
+            
+                <a href="ens-as-nft.html">
+            
+                    
+                    ENS as NFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="ens-l2-offchain.html">
+            
+                <a href="ens-l2-offchain.html">
+            
+                    
+                    ENS Layer2 and offchain data support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../contract-api-reference/name-processing.html">
+            
+                <a href="../contract-api-reference/name-processing.html">
+            
+                    
+                    Name Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../contract-api-reference/ens.html">
+            
+                <a href="../contract-api-reference/ens.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../contract-api-reference/reverseregistrar.html">
+            
+                <a href="../contract-api-reference/reverseregistrar.html">
+            
+                    
+                    ReverseRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../contract-api-reference/testregistrar.html">
+            
+                <a href="../contract-api-reference/testregistrar.html">
+            
+                    
+                    TestRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../contract-api-reference/publicresolver.html">
+            
+                <a href="../contract-api-reference/publicresolver.html">
+            
+                    
+                    PublicResolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../contract-api-reference/.eth-permanent-registrar/">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/">
+            
+                    
+                    .eth Permanent Registrar
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                    
+                    Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                    
+                    Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../contract-api-reference/dns-registrar.html">
+            
+                <a href="../contract-api-reference/dns-registrar.html">
+            
+                    
+                    DNS Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                <a href="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                    
+                    Resolving Names On-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../contract-developer-guide/writing-a-resolver.html">
+            
+                <a href="../contract-developer-guide/writing-a-resolver.html">
+            
+                    
+                    Writing a Resolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../contract-developer-guide/writing-a-registrar.html">
+            
+                <a href="../contract-developer-guide/writing-a-registrar.html">
+            
+                    
+                    Writing a Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://discuss.ens.domains">
+            
+                    
+                    ENS Discussion Forum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://discord.gg/AskZbFx">
+            
+                    
+                    ENS Support Chat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ENS Migration (February 2020)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                <a href="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                    
+                    Guide for DApp Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../ens-migration-february-2020/technical-description.html">
+            
+                <a href="../ens-migration-february-2020/technical-description.html">
+            
+                    
+                    Technical Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ENS as NFT</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ens-as-nft">ENS as NFT</h1>
+<p>When ENS .eth registrar migrated in May 2019, the .eth registrar became an <a href="https://github.com/ensdomains/ens/blob/master/docs/ethregistrar.rst#id3" target="_blank">ERC721</a> compliant non-fungible token contract, meaning that .eth registrations can be transferred in the same fashion as other NFTs.</p>
+<h2 id="deriving-tokenid-from-ens-name">Deriving tokenId from ENS name</h2>
+<p>The tokenId of ENS name is simply the uint256 representation of the hash of the label (<code>vitalik</code> for <code>vitalik.eth</code>).</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ethers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ethers&apos;</span>)
+<span class="hljs-keyword">const</span> BigNumber = ethers.BigNumber
+<span class="hljs-keyword">const</span> utils = ethers.utils
+<span class="hljs-keyword">const</span> name = <span class="hljs-string">&apos;vitalik&apos;</span>
+<span class="hljs-keyword">const</span> labelHash = utils.keccak256(utils.toUtf8Bytes(<span class="hljs-string">&apos;vitalik&apos;</span>))
+<span class="hljs-keyword">const</span> tokenId = BigNumber.from(labelHash).toString()
+</code></pre>
+<p>In the example above,<a href="https://opensea.io/assets/0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85/79233663829379634837589865448569342784712482819484549289560981379859480642508" target="_blank"><code>79233663829379634837589865448569342784712482819484549289560981379859480642508</code></a> is the tokenId of <code>vitalik.eth</code></p>
+<h2 id="deriving-ens-name-from-tokenid">Deriving ENS name from tokenId</h2>
+<p>Unlike deriving tokenId, deriving ENS name from tokenId is not as easy. This is because all ENS names are stored as fixed-length hash to allow registering infinite length of names. The downside of this architecture is that you cannot directly query ENS smart contracts to return ENS name using tokenId.</p>
+<p>Our recommended way is to query via <a href="https://thegraph.com" target="_blank">https://thegraph.com</a> ENS subgraph. The graph decodes the hash to name as it indexes. The example code to query is as follows.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ethers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ethers&apos;</span>)
+<span class="hljs-keyword">const</span> BigNumber = ethers.BigNumber
+<span class="hljs-keyword">const</span> gr = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;graphql-request&apos;</span>)
+<span class="hljs-keyword">const</span> { request, gql } = gr
+<span class="hljs-keyword">const</span> tokenId = <span class="hljs-string">&apos;79233663829379634837589865448569342784712482819484549289560981379859480642508&apos;</span>
+<span class="hljs-comment">// Should return 0xaf2caa1c2ca1d027f1ac823b529d0a67cd144264b2789fa2ea4d63a67c7103cc</span>
+<span class="hljs-keyword">const</span> labelHash = BigNumber.from(tokenId).toHexString()
+
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">&apos;https://api.thegraph.com/subgraphs/name/ensdomains/ens&apos;</span>
+<span class="hljs-keyword">const</span> GET_LABEL_NAME = gql<span class="hljs-string">`
+query{
+  domains(first:1, where:{labelhash:&quot;<span class="hljs-subst">${labelHash}</span>&quot;}){
+    labelName
+  }
+}`</span>
+
+request(url, GET_LABEL_NAME).then((data) =&gt; <span class="hljs-built_in">console</span>.log(data))
+<span class="hljs-comment">// { domains: [ { labelName: &apos;vitalik&apos; } ] }</span>
+</code></pre>
+<p>If you prefer not to rely on a third party like TheGraph, the team open-sourced <a href="https://github.com/graphprotocol/ens-rainbow" target="_blank">ens-rainbow</a> containing a link to the original dataset (6GB with 133 million entities) so that you can host your own ENS name decoding service.</p>
+<h2 id="turning-subdomain-into-nft">Turning subdomain into NFT</h2>
+<p>Currently, all the subdomains nor non <code>.eth</code> domains are not NFT, unless the domain registrar itself supports NFT such as (<code>dcl.eth</code>, and <code>.kred</code>). If you want to turn all subdomains which you own, you have to create a registrar</p>
+<ol>
+<li>Create a registrar contract as ERC721 compliant</li>
+<li>Set ENS registry address (mostly when you deploy the registrar)</li>
+<li>Create <code>register</code> function which calls <code>registry.setSubnodeOwner</code> then mint the token making the subdomain label hash as tokenId</li>
+</ol>
+<pre><code>contract DCLRegistrar is ERC721Full, Ownable {
+    constructor(
+        IENSRegistry _registry,
+    ) public ERC721Full(&quot;DCL Registrar&quot;, &quot;DCLENS&quot;) {
+        // ENS registry
+        updateRegistry(_registry);
+    }
+
+    function register(
+        string memory _subdomain,
+        bytes32 subdomainLabelHash,
+        address _beneficiary,
+        uint256 _createdDate
+    ) internal {
+        // Create new subdomain and assign the _beneficiary as the owner
+        registry.setSubnodeOwner(domainNameHash, subdomainLabelHash, _beneficiary);
+        // Mint an ERC721 token with the subdomain label hash as its id
+        _mint(_beneficiary, uint256(subdomainLabelHash));
+    }
+}
+</code></pre><p>Once deployed, then you have to transfer the controller address to the contract.</p>
+<p>For non-technical users, we are currently working on upgrading our <code>SubdomainRegistrar</code> which allows you to turn your subdomain into NFT without any coding.</p>
+<h2 id="metadata">Metadata</h2>
+<p>.eth does not have <code>.tokenURI</code> . However, we created a separate metadata service which NFT marketplaces like OpenSea can fetch metadata for ENS such as registration data, expiration date, name length, etc. For more detail, please refer to the metadata documentation site.</p>
+<footer class="page-footer"><span class="copyright">&amp;a all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at
+2022-05-18 18:40:50
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="front-end-design-guidelines.html" class="navigation navigation-prev " aria-label="Previous page: ENS Front-End Design Guidelines">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="ens-l2-offchain.html" class="navigation navigation-next " aria-label="Next page: ENS Layer2 and offchain data support">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ENS as NFT","level":"2.8","depth":1,"next":{"title":"ENS Layer2 and offchain data support","level":"2.9","depth":1,"path":"dapp-developer-guide/ens-l2-offchain.md","ref":"dapp-developer-guide/ens-l2-offchain.md","articles":[]},"previous":{"title":"ENS Front-End Design Guidelines","level":"2.7","depth":1,"path":"dapp-developer-guide/front-end-design-guidelines.md","ref":"dapp-developer-guide/front-end-design-guidelines.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","editlink","page-toc","-lunr","-search","search-plus","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&a","modify_label":"Updated at","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/alittt5/ens/"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/alittt5/ens/blob/gh-pages/"},"livereload":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","showByDefault":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"a","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ENSdocs","language":"en","gitbook":"3.2.3"},"file":{"path":"dapp-developer-guide/ens-as-nft.md","mtime":"2022-05-18T10:40:50.339Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T01:54:55.037Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,1072 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Deploying ENS on a Private Chain · ENSdocs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="a">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="dns-registrar-guide.html" />
+    
+    
+    <link rel="prev" href="permanent-registrar-faq.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="terminology.html">
+            
+                <a href="terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="frequently-asked-questions.html">
+            
+                <a href="frequently-asked-questions.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="ens-deployments.html">
+            
+                <a href="ens-deployments.html">
+            
+                    
+                    ENS Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="permanent-registrar-faq.html">
+            
+                <a href="permanent-registrar-faq.html">
+            
+                    
+                    Registrar Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="deploying-ens-on-a-private-chain.html">
+            
+                <a href="deploying-ens-on-a-private-chain.html">
+            
+                    
+                    Deploying ENS on a Private Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="dns-registrar-guide.html">
+            
+                <a href="dns-registrar-guide.html">
+            
+                    
+                    DNS Registrar guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="bug-bounty-program.html">
+            
+                <a href="bug-bounty-program.html">
+            
+                    
+                    Bug Bounty Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="ens-improvement-proposals/">
+            
+                <a href="ens-improvement-proposals/">
+            
+                    
+                    ENS Improvement Proposals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="ens-improvement-proposals/ensip-1-ens.html">
+            
+                <a href="ens-improvement-proposals/ensip-1-ens.html">
+            
+                    
+                    ENSIP-1: ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                <a href="ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                    
+                    ENSIP-2: Initial Hash Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                <a href="ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                    
+                    ENSIP-3: Reverse Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                <a href="ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                    
+                    ENSIP-4: Support for contract ABIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="ens-improvement-proposals/ensip-5-text-records.html">
+            
+                <a href="ens-improvement-proposals/ensip-5-text-records.html">
+            
+                    
+                    ENSIP-5: Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                <a href="ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                    
+                    ENSIP-6: DNS-in-ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                <a href="ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                    
+                    ENSIP-7: Contenthash field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                <a href="ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                    
+                    ENSIP-8: Interface Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                <a href="ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                    
+                    ENSIP-9: Multichain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                <a href="ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                    
+                    ENSIP-10: Wildcard Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                <a href="ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                    
+                    ENSIP-11: EVM compatible Chain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                <a href="ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                    
+                    ENSIP-12: Avatar Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="dapp-developer-guide/ens-enabling-your-dapp.html">
+            
+                <a href="dapp-developer-guide/ens-enabling-your-dapp.html">
+            
+                    
+                    ENS Enabling your DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="dapp-developer-guide/ens-libraries.html">
+            
+                <a href="dapp-developer-guide/ens-libraries.html">
+            
+                    
+                    ENS Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="dapp-developer-guide/working-with-ens.html">
+            
+                <a href="dapp-developer-guide/working-with-ens.html">
+            
+                    
+                    Working with ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="dapp-developer-guide/resolving-names.html">
+            
+                <a href="dapp-developer-guide/resolving-names.html">
+            
+                    
+                    Resolving Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="dapp-developer-guide/managing-names.html">
+            
+                <a href="dapp-developer-guide/managing-names.html">
+            
+                    
+                    Managing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="dapp-developer-guide/registering-and-renewing-names.html">
+            
+                <a href="dapp-developer-guide/registering-and-renewing-names.html">
+            
+                    
+                    Registering & Renewing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="dapp-developer-guide/front-end-design-guidelines.html">
+            
+                <a href="dapp-developer-guide/front-end-design-guidelines.html">
+            
+                    
+                    ENS Front-End Design Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="dapp-developer-guide/ens-as-nft.html">
+            
+                <a href="dapp-developer-guide/ens-as-nft.html">
+            
+                    
+                    ENS as NFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.9" data-path="dapp-developer-guide/ens-l2-offchain.html">
+            
+                <a href="dapp-developer-guide/ens-l2-offchain.html">
+            
+                    
+                    ENS Layer2 and offchain data support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="contract-api-reference/name-processing.html">
+            
+                <a href="contract-api-reference/name-processing.html">
+            
+                    
+                    Name Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="contract-api-reference/ens.html">
+            
+                <a href="contract-api-reference/ens.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="contract-api-reference/reverseregistrar.html">
+            
+                <a href="contract-api-reference/reverseregistrar.html">
+            
+                    
+                    ReverseRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="contract-api-reference/testregistrar.html">
+            
+                <a href="contract-api-reference/testregistrar.html">
+            
+                    
+                    TestRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="contract-api-reference/publicresolver.html">
+            
+                <a href="contract-api-reference/publicresolver.html">
+            
+                    
+                    PublicResolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="contract-api-reference/.eth-permanent-registrar/">
+            
+                <a href="contract-api-reference/.eth-permanent-registrar/">
+            
+                    
+                    .eth Permanent Registrar
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                <a href="contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                    
+                    Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                <a href="contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                    
+                    Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="contract-api-reference/dns-registrar.html">
+            
+                <a href="contract-api-reference/dns-registrar.html">
+            
+                    
+                    DNS Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="contract-developer-guide/resolving-names-on-chain.html">
+            
+                <a href="contract-developer-guide/resolving-names-on-chain.html">
+            
+                    
+                    Resolving Names On-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="contract-developer-guide/writing-a-resolver.html">
+            
+                <a href="contract-developer-guide/writing-a-resolver.html">
+            
+                    
+                    Writing a Resolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="contract-developer-guide/writing-a-registrar.html">
+            
+                <a href="contract-developer-guide/writing-a-registrar.html">
+            
+                    
+                    Writing a Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://discuss.ens.domains">
+            
+                    
+                    ENS Discussion Forum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://discord.gg/AskZbFx">
+            
+                    
+                    ENS Support Chat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ENS Migration (February 2020)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                <a href="ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                    
+                    Guide for DApp Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="ens-migration-february-2020/technical-description.html">
+            
+                <a href="ens-migration-february-2020/technical-description.html">
+            
+                    
+                    Technical Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Deploying ENS on a Private Chain</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="deploying-ens-on-a-private-chain">Deploying ENS on a Private Chain</h1>
+<p>If you&#x2019;d like to deploy ENS on your own network, or deploy your own copy of ENS on a public network, this guide shows you how. If you want to use an existing ENS deployment, see <a href="dapp-developer-guide/resolving-names.html">Resolving Names</a>, <a href="dapp-developer-guide/managing-names.html">Managing Names</a>, and <a href="dapp-developer-guide/registering-and-renewing-names.html">Registering &amp; Renewing Names</a> instead.</p>
+<p>On this page we will use Javascript, Web3, and <a href="https://hardhat.org/" target="_blank">Hardhat</a> with npm for simplicity. You will find a complete migration file example <a href="deploying-ens-on-a-private-chain.html#migration-file-example">at the bottom of this page</a>.</p>
+<p>Please be aware that existing frameworks such as <a href="https://ethereum-waffle.readthedocs.io/en/latest/ens.html" target="_blank">waffle</a> and <a href="https://framework.embarklabs.io/docs/naming_configuration.html" target="_blank">embark</a> have support for local ENS deployment as well.</p>
+<h2 id="importing-contracts">Importing contracts</h2>
+<p>The essential smart contracts are published <a href="https://www.npmjs.com/package/@ensdomains/ens-contracts" target="_blank">as npm modules</a>. You can install them in your npm project with <code>npm install @ensdomains/ens-contracts</code>. Now, you can require them in a migration script as follows (see the <a href="https://truffleframework.com/docs/truffle/getting-started/package-management-via-npm" target="_blank">Truffle Documentation</a> on working with contract artifacts and npm for details)</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> {
+  ENS, ENSRegistry, PublicResolver
+} <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@ensdomains/ens-contracts&apos;</span>
+</code></pre>
+<p>Including them within your smart contract is as follows</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">import</span> <span class="hljs-string">&apos;@ensdomains/ens-contracts/contracts/registry/ENS.sol&apos;</span>
+</code></pre>
+<p><code>ENS</code> contains only an interface while <code>ENSRegistry</code> includes the actual implementation.</p>
+<h2 id="deploy-the-registry">Deploy the Registry</h2>
+<p>The registry is ENS&#x2019;s central component and stores, among other things, who owns which domain. This is the example using ethers and hardhat.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ENSRegistry = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;ENSRegistry&quot;</span>)
+<span class="hljs-keyword">await</span> ENSRegistry.deploy()
+</code></pre>
+<p>Once deployed, you will have a fresh ENS registry, whose root node is owned by the account that submitted the transaction. This account has total control over the ENS registry - it can create and replace any node in the entire tree.</p>
+<p>From here, it&apos;s possible to create and manage names by directly interacting with the registry, as described in <a href="dapp-developer-guide/managing-names.html">Managing Names</a>. However, you will probably want to <a href="deploying-ens-on-a-private-chain.html#deploy-a-resolver">deploy a resolver</a>, and you may want to <a href="deploying-ens-on-a-private-chain.html#deploy-a-registrar">deploy a registrar</a> so other users can register names.</p>
+<h2 id="deploy-a-resolver">Deploy a Resolver</h2>
+<p>Records in the registry can point to resolver contracts which store additional domain information. The most common use-case is to store an address for a domain, but storing a contract ABI or text is also possible. For most purposes on private networks it&apos;s convenient to have an unrestricted general-purpose resolver available. Deploying one is straightforward:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ZERO_ADDRESS = <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>;
+<span class="hljs-keyword">const</span> ENSRegistry = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;ENSRegistry&quot;</span>)
+<span class="hljs-keyword">const</span> registry = <span class="hljs-keyword">await</span> ENSRegistry.deploy()
+<span class="hljs-keyword">await</span> registry.deployed()
+<span class="hljs-keyword">const</span> PublicResolver = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;PublicResolver&quot;</span>)
+<span class="hljs-keyword">const</span> resolver = <span class="hljs-keyword">await</span> PublicResolver.deploy(registry.address, ZERO_ADDRESS);
+<span class="hljs-keyword">await</span> resolver.deployed()
+</code></pre>
+<p>The <a href="https://github.com/ensdomains/ens-contracts/blob/master/contracts/resolvers/PublicResolver.sol" target="_blank"><code>PublicResolver</code></a> looks up ownership in the registry, which is why the registry&apos;s address is required at deployment.</p>
+<p>For ease of use, we can give this resolver a name:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ethers = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;ethers&apos;</span>);
+<span class="hljs-keyword">const</span> utils = ethers.utils;
+<span class="hljs-keyword">const</span> labelhash = (label) =&gt; utils.keccak256(utils.toUtf8Bytes(label))
+<span class="hljs-keyword">const</span> namehash = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eth-ens-namehash&apos;</span>);
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setupResolver</span>(<span class="hljs-params">ens, resolver, accounts</span>) </span>{
+  <span class="hljs-keyword">const</span> resolverNode = namehash.hash(<span class="hljs-string">&quot;resolver&quot;</span>);
+  <span class="hljs-keyword">const</span> resolverLabel = labelhash(<span class="hljs-string">&quot;resolver&quot;</span>);
+
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(<span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>, resolverLabel, accounts[<span class="hljs-number">0</span>]);
+  <span class="hljs-keyword">await</span> ens.setResolver(resolverNode, resolver.address);
+  <span class="hljs-keyword">await</span> resolver.setAddr(resolverNode, resolver.address);
+}
+</code></pre>
+<p>Above, we first create a new top-level domain, &quot;resolver&quot;, then set its resolver address to our newly deployed public resolver. Finally, we set up an address record for &quot;resolver&quot;, pointing back to the resolver address. In effect, the resolver is answering queries about its own address. After this, anyone can find the public resolver at the special ENS name &quot;resolver&quot;. We call this function after deploying the public resolver in a <code>.then()</code> block as we did with the resolver.</p>
+<h2 id="deploy-a-registrar">Deploy a Registrar</h2>
+<p>So far, domains can only be registered manually by the owner of the registry&apos;s root node. Fortunately, contracts can also own nodes. This means we can set up a registrar contract as the owner of a node, e.g. &quot;test&quot;, in the registry which enables it to distribute subdomains such as &quot;mycontract.test&quot;. It allows us to have custom, on-chain logic which governs domain allocation. Once we own a (sub-)node we are free to repeat this process and set up another registrar. If you are part of the &quot;myorg&quot; organisation you could register &quot;myorg.test&quot; and let it point to your custom registrar which only allows certified members of your organisation to claim subdomains such as &quot;bob.myorg.test&quot;. For our private network, we&apos;ll use the simple &apos;first come, first served&apos; <a href="https://github.com/ensdomains/ens/blob/master/contracts/FIFSRegistrar.sol" target="_blank">FIFSRegistrar</a>, and set it as the owner of the top-level domain &quot;test&quot; in our migration script:</p>
+<pre><code class="lang-javascript">...
+  const registrar = <span class="hljs-keyword">await</span> FIFSRegistrar.deploy(ens.address, namehash.hash(<span class="hljs-string">&quot;test&quot;</span>));
+  <span class="hljs-keyword">await</span> registrar.deployed();
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(<span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>, sha3(<span class="hljs-string">&quot;test&quot;</span>), registrar.address);
+})
+...
+</code></pre>
+<h2 id="deploy-the-reverse-registrar">Deploy the Reverse Registrar</h2>
+<p>Similarly, if you wish to enable reverse resolution on your deployment, you will need to deploy the reverse registrar:</p>
+<pre><code class="lang-javascript">...
+const reverseRegistrar = <span class="hljs-keyword">await</span> ReverseRegistrar.deploy(ens.address, resolver.address);
+<span class="hljs-keyword">await</span> reverseRegistrar.deployed();
+setupReverseRegistrar(ens, resolver, reverseRegistrar, accounts);
+...
+
+async <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setupReverseRegistrar</span>(<span class="hljs-params">ens, resolver, reverseRegistrar, accounts</span>) </span>{
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(<span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>, utils.sha3(<span class="hljs-string">&quot;reverse&quot;</span>), accounts[<span class="hljs-number">0</span>]);
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(namehash.hash(<span class="hljs-string">&quot;reverse&quot;</span>), utils.sha3(<span class="hljs-string">&quot;addr&quot;</span>), reverseRegistrar.address);
+}
+</code></pre>
+<h2 id="migration-file-example">Migration File Example</h2>
+<p>We can combine the steps above in a single hardhat migration file. This allows us to deploy ENS in one go:</p>
+<h3 id="contractsdepssol">contracts/deps.sol</h3>
+<pre><code class="lang-text">//SPDX-License-Identifier: MIT
+// These imports are here to force Hardhat to compile contracts we depend on in our tests but don&apos;t need anywhere else.
+import &quot;@ensdomains/ens-contracts/contracts/registry/ENSRegistry.sol&quot;;
+import &quot;@ensdomains/ens-contracts/contracts/registry/FIFSRegistrar.sol&quot;;
+import &quot;@ensdomains/ens-contracts/contracts/resolvers/PublicResolver.sol&quot;;
+`
+</code></pre>
+<h3 id="scriptdeployjs">script/deploy.js</h3>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> hre = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;hardhat&quot;</span>);
+<span class="hljs-keyword">const</span> namehash = <span class="hljs-built_in">require</span>(<span class="hljs-string">&apos;eth-ens-namehash&apos;</span>);
+<span class="hljs-keyword">const</span> tld = <span class="hljs-string">&quot;test&quot;</span>;
+<span class="hljs-keyword">const</span> ethers = hre.ethers;
+<span class="hljs-keyword">const</span> utils = ethers.utils;
+<span class="hljs-keyword">const</span> labelhash = (label) =&gt; utils.keccak256(utils.toUtf8Bytes(label))
+<span class="hljs-keyword">const</span> ZERO_ADDRESS = <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000&quot;</span>;
+<span class="hljs-keyword">const</span> ZERO_HASH = <span class="hljs-string">&quot;0x0000000000000000000000000000000000000000000000000000000000000000&quot;</span>;
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-keyword">const</span> ENSRegistry = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;ENSRegistry&quot;</span>)
+  <span class="hljs-keyword">const</span> FIFSRegistrar = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;FIFSRegistrar&quot;</span>)
+  <span class="hljs-keyword">const</span> ReverseRegistrar = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;ReverseRegistrar&quot;</span>)
+  <span class="hljs-keyword">const</span> PublicResolver = <span class="hljs-keyword">await</span> ethers.getContractFactory(<span class="hljs-string">&quot;PublicResolver&quot;</span>)
+  <span class="hljs-keyword">const</span> signers = <span class="hljs-keyword">await</span> ethers.getSigners();
+  <span class="hljs-keyword">const</span> accounts = signers.map(s =&gt; s.address)
+
+  <span class="hljs-keyword">const</span> ens = <span class="hljs-keyword">await</span> ENSRegistry.deploy()
+  <span class="hljs-keyword">await</span> ens.deployed()
+  <span class="hljs-keyword">const</span> resolver = <span class="hljs-keyword">await</span> PublicResolver.deploy(ens.address, ZERO_ADDRESS);
+  <span class="hljs-keyword">await</span> resolver.deployed()
+  <span class="hljs-keyword">await</span> setupResolver(ens, resolver, accounts)
+  <span class="hljs-keyword">const</span> registrar = <span class="hljs-keyword">await</span>  FIFSRegistrar.deploy(ens.address, namehash.hash(tld));
+  <span class="hljs-keyword">await</span> registrar.deployed()
+  <span class="hljs-keyword">await</span> setupRegistrar(ens, registrar);
+  <span class="hljs-keyword">const</span> reverseRegistrar = <span class="hljs-keyword">await</span> ReverseRegistrar.deploy(ens.address, resolver.address);
+  <span class="hljs-keyword">await</span> reverseRegistrar.deployed()
+  <span class="hljs-keyword">await</span> setupReverseRegistrar(ens, registrar, reverseRegistrar, accounts);
+};
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setupResolver</span>(<span class="hljs-params">ens, resolver, accounts</span>) </span>{
+  <span class="hljs-keyword">const</span> resolverNode = namehash.hash(<span class="hljs-string">&quot;resolver&quot;</span>);
+  <span class="hljs-keyword">const</span> resolverLabel = labelhash(<span class="hljs-string">&quot;resolver&quot;</span>);
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(ZERO_HASH, resolverLabel, accounts[<span class="hljs-number">0</span>]);
+  <span class="hljs-keyword">await</span> ens.setResolver(resolverNode, resolver.address);
+  <span class="hljs-keyword">await</span> resolver[<span class="hljs-string">&apos;setAddr(bytes32,address)&apos;</span>](resolverNode, resolver.address);
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setupRegistrar</span>(<span class="hljs-params">ens, registrar</span>) </span>{
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(ZERO_HASH, labelhash(tld), registrar.address);
+}
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">setupReverseRegistrar</span>(<span class="hljs-params">ens, registrar, reverseRegistrar, accounts</span>) </span>{
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(ZERO_HASH, labelhash(<span class="hljs-string">&quot;reverse&quot;</span>), accounts[<span class="hljs-number">0</span>]);
+  <span class="hljs-keyword">await</span> ens.setSubnodeOwner(namehash.hash(<span class="hljs-string">&quot;reverse&quot;</span>), labelhash(<span class="hljs-string">&quot;addr&quot;</span>), reverseRegistrar.address);
+}
+
+<span class="hljs-comment">// We recommend this pattern to be able to use async/await everywhere</span>
+<span class="hljs-comment">// and properly handle errors.</span>
+main()
+  .then(() =&gt; process.exit(<span class="hljs-number">0</span>))
+  .catch((error) =&gt; {
+    <span class="hljs-built_in">console</span>.error(error);
+    process.exit(<span class="hljs-number">1</span>);
+  });
+</code></pre>
+<p>To execute the migration file on hardhat, run the following command line.</p>
+<pre><code class="lang-text">npx hardhat run scripts/deploy.js
+</code></pre>
+<h3 id="deploying-ens-in-a-single-transaction">Deploying ENS in a single transaction</h3>
+<p>Alternately you may wish to deploy a test registrar and its dependencies with a single transaction. This is useful for example in unit tests where you wish to start from a clean slate in each test. In many cases it will also be faster than sending a series of separate transactions.</p>
+<p>This can be done by deploying a new contract that creates and sets up all the other contracts in its constructor. The below code creates all the ENS contracts and assigns the eth TLD to the FIFS Registrar so that any eth domain may be registered in the unit tests.</p>
+<pre><code class="lang-text">pragma solidity &gt;=0.8.4;
+import {INameWrapper, PublicResolver} from &apos;@ensdomains/ens-contracts/contracts/resolvers/PublicResolver.sol&apos;;
+import &apos;@ensdomains/ens-contracts/contracts/registry/ENSRegistry.sol&apos;;
+import &apos;@ensdomains/ens-contracts/contracts/registry/FIFSRegistrar.sol&apos;;
+import {NameResolver, ReverseRegistrar} from &apos;@ensdomains/ens-contracts/contracts/registry/ReverseRegistrar.sol&apos;;
+
+// Construct a set of test ENS contracts.
+contract ENSDeployer {
+  bytes32 public constant TLD_LABEL = keccak256(&apos;eth&apos;);
+  bytes32 public constant RESOLVER_LABEL = keccak256(&apos;resolver&apos;);
+  bytes32 public constant REVERSE_REGISTRAR_LABEL = keccak256(&apos;reverse&apos;);
+  bytes32 public constant ADDR_LABEL = keccak256(&apos;addr&apos;);
+
+  ENSRegistry public ens;
+  FIFSRegistrar public fifsRegistrar;
+  ReverseRegistrar public reverseRegistrar;
+  PublicResolver public publicResolver;
+
+  function namehash(bytes32 node, bytes32 label) public pure returns (bytes32) {
+    return keccak256(abi.encodePacked(node, label));
+  }
+
+  constructor() public {
+    ens = new ENSRegistry();
+    publicResolver = new PublicResolver(ens, INameWrapper(address(0)));
+
+    // Set up the resolver
+    bytes32 resolverNode = namehash(bytes32(0), RESOLVER_LABEL);
+
+    ens.setSubnodeOwner(bytes32(0), RESOLVER_LABEL, address(this));
+    ens.setResolver(resolverNode, address(publicResolver));
+    publicResolver.setAddr(resolverNode, address(publicResolver));
+
+    // Create a FIFS registrar for the TLD
+    fifsRegistrar = new FIFSRegistrar(ens, namehash(bytes32(0), TLD_LABEL));
+
+    ens.setSubnodeOwner(bytes32(0), TLD_LABEL, address(fifsRegistrar));
+
+    // Construct a new reverse registrar and point it at the public resolver
+    reverseRegistrar = new ReverseRegistrar(
+      ens,
+      NameResolver(address(publicResolver))
+    );
+
+    // Set up the reverse registrar
+    ens.setSubnodeOwner(bytes32(0), REVERSE_REGISTRAR_LABEL, address(this));
+    ens.setSubnodeOwner(
+      namehash(bytes32(0), REVERSE_REGISTRAR_LABEL),
+      ADDR_LABEL,
+      address(reverseRegistrar)
+    );
+  }
+}
+</code></pre>
+<footer class="page-footer"><span class="copyright">&amp;a all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at
+2022-05-06 09:19:39
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="permanent-registrar-faq.html" class="navigation navigation-prev " aria-label="Previous page: Registrar Frequently Asked Questions">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="dns-registrar-guide.html" class="navigation navigation-next " aria-label="Next page: DNS Registrar guide">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Deploying ENS on a Private Chain","level":"1.6","depth":1,"next":{"title":"DNS Registrar guide","level":"1.7","depth":1,"path":"dns-registrar-guide.md","ref":"dns-registrar-guide.md","articles":[]},"previous":{"title":"Registrar Frequently Asked Questions","level":"1.5","depth":1,"path":"permanent-registrar-faq.md","ref":"permanent-registrar-faq.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","editlink","page-toc","-lunr","-search","search-plus","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&a","modify_label":"Updated at","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/alittt5/ens/"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/alittt5/ens/blob/gh-pages/"},"livereload":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","showByDefault":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"a","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ENSdocs","language":"en","gitbook":"3.2.3"},"file":{"path":"deploying-ens-on-a-private-chain.md","mtime":"2022-05-06T01:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T01:54:55.037Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

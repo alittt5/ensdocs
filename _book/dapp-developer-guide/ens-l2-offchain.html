@@ -1,0 +1,959 @@
+
+<!DOCTYPE HTML>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>ENS Layer2 and offchain data support · ENSdocs</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="a">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../contract-api-reference/name-processing.html" />
+    
+    
+    <link rel="prev" href="ens-as-nft.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../terminology.html">
+            
+                <a href="../terminology.html">
+            
+                    
+                    Terminology
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../frequently-asked-questions.html">
+            
+                <a href="../frequently-asked-questions.html">
+            
+                    
+                    Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../ens-deployments.html">
+            
+                <a href="../ens-deployments.html">
+            
+                    
+                    ENS Deployments
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../permanent-registrar-faq.html">
+            
+                <a href="../permanent-registrar-faq.html">
+            
+                    
+                    Registrar Frequently Asked Questions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../deploying-ens-on-a-private-chain.html">
+            
+                <a href="../deploying-ens-on-a-private-chain.html">
+            
+                    
+                    Deploying ENS on a Private Chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../dns-registrar-guide.html">
+            
+                <a href="../dns-registrar-guide.html">
+            
+                    
+                    DNS Registrar guide
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../bug-bounty-program.html">
+            
+                <a href="../bug-bounty-program.html">
+            
+                    
+                    Bug Bounty Program
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../ens-improvement-proposals/">
+            
+                <a href="../ens-improvement-proposals/">
+            
+                    
+                    ENS Improvement Proposals
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../ens-improvement-proposals/ensip-1-ens.html">
+            
+                <a href="../ens-improvement-proposals/ensip-1-ens.html">
+            
+                    
+                    ENSIP-1: ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                <a href="../ens-improvement-proposals/ensip-2-initial-hash-registrar.html">
+            
+                    
+                    ENSIP-2: Initial Hash Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-3-reverse-resolution.html">
+            
+                    
+                    ENSIP-3: Reverse Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                <a href="../ens-improvement-proposals/ensip-4-support-for-contract-abis.html">
+            
+                    
+                    ENSIP-4: Support for contract ABIs
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                <a href="../ens-improvement-proposals/ensip-5-text-records.html">
+            
+                    
+                    ENSIP-5: Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                <a href="../ens-improvement-proposals/ensip-6-dns-in-ens.html">
+            
+                    
+                    ENSIP-6: DNS-in-ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                <a href="../ens-improvement-proposals/ensip-7-contenthash-field.html">
+            
+                    
+                    ENSIP-7: Contenthash field
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                <a href="../ens-improvement-proposals/ensip-8-interface-discovery.html">
+            
+                    
+                    ENSIP-8: Interface Discovery
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.9" data-path="../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-9-multichain-address-resolution.html">
+            
+                    
+                    ENSIP-9: Multichain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.10" data-path="../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-10-wildcard-resolution.html">
+            
+                    
+                    ENSIP-10: Wildcard Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.11" data-path="../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                <a href="../ens-improvement-proposals/ensip-11-evmchain-address-resolution.html">
+            
+                    
+                    ENSIP-11: EVM compatible Chain Address Resolution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.12" data-path="../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                <a href="../ens-improvement-proposals/ensip-12-avatar-text-records.html">
+            
+                    
+                    ENSIP-12: Avatar Text Records
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Dapp Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="2.1" data-path="ens-enabling-your-dapp.html">
+            
+                <a href="ens-enabling-your-dapp.html">
+            
+                    
+                    ENS Enabling your DApp
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.2" data-path="ens-libraries.html">
+            
+                <a href="ens-libraries.html">
+            
+                    
+                    ENS Libraries
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.3" data-path="working-with-ens.html">
+            
+                <a href="working-with-ens.html">
+            
+                    
+                    Working with ENS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.4" data-path="resolving-names.html">
+            
+                <a href="resolving-names.html">
+            
+                    
+                    Resolving Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.5" data-path="managing-names.html">
+            
+                <a href="managing-names.html">
+            
+                    
+                    Managing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.6" data-path="registering-and-renewing-names.html">
+            
+                <a href="registering-and-renewing-names.html">
+            
+                    
+                    Registering & Renewing Names
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.7" data-path="front-end-design-guidelines.html">
+            
+                <a href="front-end-design-guidelines.html">
+            
+                    
+                    ENS Front-End Design Guidelines
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="2.8" data-path="ens-as-nft.html">
+            
+                <a href="ens-as-nft.html">
+            
+                    
+                    ENS as NFT
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="2.9" data-path="ens-l2-offchain.html">
+            
+                <a href="ens-l2-offchain.html">
+            
+                    
+                    ENS Layer2 and offchain data support
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract API Reference</li>
+        
+        
+    
+        <li class="chapter " data-level="3.1" data-path="../contract-api-reference/name-processing.html">
+            
+                <a href="../contract-api-reference/name-processing.html">
+            
+                    
+                    Name Processing
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.2" data-path="../contract-api-reference/ens.html">
+            
+                <a href="../contract-api-reference/ens.html">
+            
+                    
+                    Registry
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.3" data-path="../contract-api-reference/reverseregistrar.html">
+            
+                <a href="../contract-api-reference/reverseregistrar.html">
+            
+                    
+                    ReverseRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.4" data-path="../contract-api-reference/testregistrar.html">
+            
+                <a href="../contract-api-reference/testregistrar.html">
+            
+                    
+                    TestRegistrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.5" data-path="../contract-api-reference/publicresolver.html">
+            
+                <a href="../contract-api-reference/publicresolver.html">
+            
+                    
+                    PublicResolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6" data-path="../contract-api-reference/.eth-permanent-registrar/">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/">
+            
+                    
+                    .eth Permanent Registrar
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="3.6.1" data-path="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/registrar.html">
+            
+                    
+                    Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="3.6.2" data-path="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                <a href="../contract-api-reference/.eth-permanent-registrar/controller.html">
+            
+                    
+                    Controller
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="3.7" data-path="../contract-api-reference/dns-registrar.html">
+            
+                <a href="../contract-api-reference/dns-registrar.html">
+            
+                    
+                    DNS Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">Contract Developer Guide</li>
+        
+        
+    
+        <li class="chapter " data-level="4.1" data-path="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                <a href="../contract-developer-guide/resolving-names-on-chain.html">
+            
+                    
+                    Resolving Names On-chain
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.2" data-path="../contract-developer-guide/writing-a-resolver.html">
+            
+                <a href="../contract-developer-guide/writing-a-resolver.html">
+            
+                    
+                    Writing a Resolver
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.3" data-path="../contract-developer-guide/writing-a-registrar.html">
+            
+                <a href="../contract-developer-guide/writing-a-registrar.html">
+            
+                    
+                    Writing a Registrar
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.4" >
+            
+                <a target="_blank" href="https://discuss.ens.domains">
+            
+                    
+                    ENS Discussion Forum
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="4.5" >
+            
+                <a target="_blank" href="https://discord.gg/AskZbFx">
+            
+                    
+                    ENS Support Chat
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+        
+        <li class="header">ENS Migration (February 2020)</li>
+        
+        
+    
+        <li class="chapter " data-level="5.1" data-path="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                <a href="../ens-migration-february-2020/guide-for-dapp-developers.html">
+            
+                    
+                    Guide for DApp Developers
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="5.2" data-path="../ens-migration-february-2020/technical-description.html">
+            
+                <a href="../ens-migration-february-2020/technical-description.html">
+            
+                    
+                    Technical Description
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >ENS Layer2 and offchain data support</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div class="search-plus" id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ens-layer2-and-offchain-data-support">ENS Layer2 and offchain data support</h1>
+<h2 id="summary">Summary</h2>
+<p>With the proliferation of layer 2 solutions for Ethereum that are starting to reach maturity, it&apos;s important that ENS is able to provide resolution services across the entire ecosystem, as well as making it possible for ENS users to take advantage of the efficiencies made possible by Layer 2 solutions. Subsequent to a post by <a href="https://ethereum-magicians.org/t/a-general-purpose-l2-friendly-ens-standard/4591" target="_blank">Vitalik</a> that suggested a possible means for this, the ENS team and the wider ENS and L2 community have been working on a general-purpose &quot;Layer 2 bridge&quot; that makes cross-platform interoperability possible for both ENS and other applications that need to be able to retrieve data from a variety of offchain sources (any data that resides outside of Ethereum Mainnet also known as layer 1/L1. This includes both propriety database and layer 2/L2 solutions such as Optimism, Arbitrum, Starkware, ZKSync, and so on) in a trustless fashion and came up with standards.</p>
+<ul>
+<li><a href="https://eips.ethereum.org/EIPS/eip-3668" target="_blank">EIP-3668: CCIP Read: Secure offchain data retrieval</a></li>
+<li><a href="ens-improvement-proposals/ensip-10-wildcard-resolution">ENSIP 10: Wildcard Resolution</a></li>
+</ul>
+<p><strong>EIP 3668</strong> allows for offchain (including Layer 2/L2) lookups of data in a way that is transparent to clients and provides contract authors to implement whatever validation is necessary; in many cases, this can be provided without any additional trust assumptions over and above those required if data is stored onchain.</p>
+<p><strong>ENSIP 10</strong> is a general way to resolve wildcard (eg: *.foo.eth) on L1. Issuing subdomains and moving the resolution of the parent name offchain allows dapps to create subdomains offchain yet make it accessible through L1.</p>
+<h2 id="steps-required-for-dapps-and-wallets-to-support-offchain-data-lookup">Steps required for Dapps and wallets to support offchain data lookup.</h2>
+<p>If your dapps or wallets use one of those libraries, the EIP 3668 and ENSIP 10 support will be built in, so simply update the library when ready.</p>
+<ul>
+<li><a href="https://github.com/ethers-io/ethers.js" target="_blank">ethersjs</a></li>
+<li><a href="https://github.com/ethereum/web3.js" target="_blank">web3js</a></li>
+</ul>
+<h3 id="ethersjs">ethersjs</h3>
+<p>5.6.1 supports both EIP3668 and ENSIP 10.</p>
+<p>No code change is required as long as your app is interacting with ENS through <a href="https://docs.ethers.io/v5/api/providers/provider/#Provider--ens-methods" target="_blank">etherjs ENS methods</a>.</p>
+<p>To try out these features, <code>offchainexample.eth</code> points to so-called &quot;offchain resolver&quot; that fetches data from JSON configuration file hosted on google app engine. It will reply data to any record for offchainexample.eth and its subdomain record such as <code>2.offchainexample.eth</code>. The example resolver is not using L2 data but the same mechanism works when the L2 resolver becomes ready.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">const</span> { ethers } = <span class="hljs-built_in">require</span>(<span class="hljs-string">&quot;ethers&quot;</span>);
+<span class="hljs-keyword">const</span> url = <span class="hljs-string">`https://mainnet.infura.io/v3/<span class="hljs-subst">${process.env.API_KEY}</span>`</span>
+<span class="hljs-keyword">const</span> provider = <span class="hljs-keyword">new</span> ethers.providers.JsonRpcProvider(url);
+
+<span class="hljs-keyword">async</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">main</span>(<span class="hljs-params"></span>)</span>{
+  <span class="hljs-keyword">let</span> resolver = <span class="hljs-keyword">await</span> provider.getResolver(<span class="hljs-string">&apos;1.offchainexample.eth&apos;</span>)
+  <span class="hljs-keyword">let</span> address = <span class="hljs-keyword">await</span> provider.resolveName(<span class="hljs-string">&apos;1.offchainexample.eth&apos;</span>)
+  <span class="hljs-keyword">let</span> email = <span class="hljs-keyword">await</span> resolver.getText(<span class="hljs-string">&apos;email&apos;</span>)
+  <span class="hljs-built_in">console</span>.log({resolver:resolver.address, address, email})
+}
+main()
+</code></pre>
+<p>The expected output is as follows.</p>
+<pre><code>$node index.js
+{
+  resolver: &apos;0xC1735677a60884ABbCF72295E88d47764BeDa282&apos;,
+  address: &apos;0x41563129cDbbD0c5D3e1c86cf9563926b243834d&apos;,
+  email: &apos;nick@ens.domains&apos;
+}
+</code></pre><p><a href="@chainlink/ethers-ccip-read-provider">@chainlink/ethers-ccip-read-provider</a>(<a href="https://github.com/smartcontractkit/ccip-read/tree/rewrite/packages/ethers-ccip-read-provider" target="_blank">source</a>) also implements EIP 3668 as an independent npm module</p>
+<p>The basic usage example is as follows.</p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> { CCIPReadProvider } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@chainlink/ethers-ccip-read-provider&apos;</span>;
+<span class="hljs-keyword">import</span> { abi <span class="hljs-keyword">as</span> IExtendedResolver_abi } <span class="hljs-keyword">from</span> <span class="hljs-string">&apos;@ensdomains/offchain-resolver-contracts/artifacts/contracts/IExtendedResolver.sol/IExtendedResolver.json&apos;</span>;
+<span class="hljs-keyword">const</span> IExtendedResolver = <span class="hljs-keyword">new</span> ethers.utils.Interface(IExtendedResolver_abi);
+<span class="hljs-keyword">const</span> baseProvider = ethers.getDefaultProvider(options.provider);
+<span class="hljs-keyword">const</span> provider = <span class="hljs-keyword">new</span> CCIPReadProvider(baseProvider);
+</code></pre>
+<p>Please refer to <a href="https://github.com/ensdomains/offchain-resolver/blob/main/packages/client/src/index.ts#L46" target="_blank">offchain resolver client example code</a> for more detail.</p>
+<h3 id="web3js">web3js</h3>
+<p>Work in progress</p>
+<h3 id="any-other-libraries">Any other libraries</h3>
+<p>If you use other libraries or custom integration, please raise the GitHub issue to the project repo or at <a href="https://github.com/ensdomains/pm/issues" target="_blank">ENS project management repo</a> if the equivalent repo does not exist so that ENS team can keep track of the progress.</p>
+<h2 id="steps-required-for-dapps-and-wallets-to-issue-subdomains-offchain">Steps required for Dapps and wallets to issue subdomains offchain</h2>
+<p>If you wish to issue subdomains using offchain data storage, please follow <a href="https://github.com/ensdomains/offchain-resolver" target="_blank">offchain resolver</a> as a reference point. The example uses a flat file as a data source but can easily be replaced with database calls.</p>
+<p>L2 support is still a work in progress.</p>
+<h2 id="faq">FAQ</h2>
+<h3 id="is-the-change-backwards-compatible">Is the change backwards compatible?</h3>
+<p>Yes. The existing names on L1 will continue working without clients nor applications supporting these standards. Only names that are outside of L1 will not be resolved.</p>
+<h3 id="will-l2offchain-data-be-supported-by-graphql">Will L2/offchain data be supported by GraphQL?</h3>
+<p>Once each L2 is officially supported, we will need to spin up a subgraph for each L2 bridge, and we will use schema stitching to make using them transparent to callers.</p>
+<p>For names that are not hosted on a supported L2, we won&apos;t be able to fetch data that are normally only available on the subgraph</p>
+<h3 id="how-do-you-support-other-evm-compatible-chains">How do you support other EVM compatible chains?</h3>
+<p>Non-L2 chains lack ways to verify data on L1 in the trustless manner. The alternative is for chain bridge operators to act as a trusted third-party and hosts the offchain gateway, or individual dapps hosts own gateway and sign each data with the private key of the ENS name.</p>
+<h3 id="can-i-issue-a-new-tld-unique-to-an-offchain-environment">Can I issue a new tld unique to an offchain environment?</h3>
+<p>No. Please read <a href="https://medium.com/the-ethereum-name-service/why-ens-doesnt-create-more-tlds-responsible-citizenship-in-the-global-namespace-7e66658fe2b1" target="_blank">&quot;Why ENS Doesn&apos;t Create More TLDs: Responsible Citizenship in the Global Namespace&quot;</a> for more detail</p>
+<h3 id="can-i-set-a-primary-name-to-names-on-offchain">Can I set a primary name to names on offchain?</h3>
+<p>Yes, you can. However, reverse registrar (it is a hidden top-level domain starting with .addr.reverse) currently resides on L1; hence you have to pay gas on L1. We may consider moving the reverse registrar to L2 in future.</p>
+<h3 id="can-i-register-eth-name-on-offchain">Can I register .eth name on offchain?</h3>
+<p>Only when we migrate .eth name to a specific L2 as one of the last steps of our migration after finding out which L2 supports ENS integration the best.</p>
+<h3 id="how-do-i-handle-contract-addresses">How do I handle contract addresses?</h3>
+<p>Unlike EOA (Externally Owned Account), contract based accounts such as multisig may only be accessible in certain chains. <a href="ens-improvement-proposals/ensip-11-evmchain-address-resolution.md">ENSIP-11</a> allows a single name to hold different addresses across multiple EVM compatible chains and recommendation is to store contract addresses to EVM chain specific address record field.</p>
+<h3 id="can-i-use-libraries-from-other-name-services-that-support-eth">Can I use libraries from other name services that support .eth?</h3>
+<p><code>@unstoppabledomains/resolution</code> removed <a href="https://github.com/unstoppabledomains/resolution/releases/tag/v7.0.0" target="_blank">ENS support as of December 2021</a>. Other services tend not to support all ENS TLDs especially DNS based TLDs (.com, .net, etc) so we advise not to rely on these libraries resolving ENS names.</p>
+<h2 id="references-and-previous-discussions">References and previous discussions</h2>
+<ul>
+<li><a href="https://medium.com/the-ethereum-name-service/mvp-of-ens-on-l2-with-optimism-demo-video-how-to-try-it-yourself-b44c390cbd67" target="_blank">MVP of ENS on L2 with Optimism: Demo Video + How to Try It Yourself</a></li>
+<li><a href="https://medium.com/the-ethereum-name-service/a-general-purpose-bridge-for-ethereum-layer-2s-e28810ec1d88" target="_blank">A general-purpose bridge for Ethereum Layer 2s</a></li>
+<li><a href="https://ethereum-magicians.org/t/a-general-purpose-l2-friendly-ens-standard/4591" target="_blank">A general-purpose L2-friendly ENS standard</a></li>
+<li><a href="https://www.youtube.com/watch?v=L9N7U\_bNmOU" target="_blank">Video: ENS Workshop on 18th Oct 2021</a></li>
+<li><a href="https://www.youtube.com/watch?v=9DdL7AQgXTM" target="_blank">Video: ENS Workshop on 6th April 2021</a></li>
+<li><a href="https://www.youtube.com/watch?v=QwEiAedSNYI" target="_blank">Video: ENS on Layer 2 meeting #2 on 28th Oct 2020</a></li>
+<li><a href="https://www.youtube.com/watch?v=vloI0VT8DXE" target="_blank">Video: ENS on Layer 2 meeting on 13th Oct 2020</a></li>
+<li><a href="https://www.youtube.com/watch?v=65z\_j4n8mTk\&amp;t=2s" target="_blank">Video: ENS workshop on 29th Sep 2020</a></li>
+</ul>
+<footer class="page-footer"><span class="copyright">&amp;a all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">Updated at
+2022-05-06 09:19:39
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ens-as-nft.html" class="navigation navigation-prev " aria-label="Previous page: ENS as NFT">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../contract-api-reference/name-processing.html" class="navigation navigation-next " aria-label="Next page: Name Processing">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"ENS Layer2 and offchain data support","level":"2.9","depth":1,"next":{"title":"Name Processing","level":"3.1","depth":1,"path":"contract-api-reference/name-processing.md","ref":"contract-api-reference/name-processing.md","articles":[]},"previous":{"title":"ENS as NFT","level":"2.8","depth":1,"path":"dapp-developer-guide/ens-as-nft.md","ref":"dapp-developer-guide/ens-as-nft.md","articles":[]},"dir":"ltr"},"config":{"plugins":["github","editlink","page-toc","-lunr","-search","search-plus","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"&a","modify_label":"Updated at","modify_format":"YYYY-MM-DD HH:mm:ss"},"github":{"url":"https://github.com/alittt5/ens/"},"editlink":{"label":"编辑本页","multilingual":false,"base":"https://github.com/alittt5/ens/blob/gh-pages/"},"livereload":{},"page-toc":{"position":"before-first","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3","showByDefault":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"search-plus":{}},"theme":"default","author":"a","pdf":{"pageNumbers":true,"fontSize":11,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"toc":true},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"ENSdocs","language":"en","gitbook":"3.2.3"},"file":{"path":"dapp-developer-guide/ens-l2-offchain.md","mtime":"2022-05-06T01:19:39.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-05-19T01:54:55.037Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-github/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-editlink/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
